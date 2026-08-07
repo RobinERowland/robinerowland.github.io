@@ -11,6 +11,9 @@ main:
   - title: "Presentations"
     url: /presentations/
 
+- title: "Teaching"
+    url: /teaching/    
+    
   - title: "Outreach"
     url: /outreach/    
 
