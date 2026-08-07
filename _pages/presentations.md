@@ -1,39 +1,44 @@
 ---
-permalink: /terms/
-title: "Terms and Privacy Policy"
-modified: 2016-06-06
+layout: archive
+title: "Presentations"
+permalink: /presentations/
+author_profile: true
 ---
 
-{% include base_path %}
-{% include toc %}
+# Presentations
 
-## Privacy Policy
+<!-- AUTO:PRESENTATIONS:START -->
 
-The privacy of my visitors is extremely important. This Privacy Policy outlines the types of personal information that is received and collected and how it is used.
+**2026-08-01** — Physiological tools for monitoring urban impacts at the roost level in insectivorous bats. Joint Conference of the Australian Mammal Society and Australasian Bat Society, Australia.
 
-First and foremost, I will never share your email address or any other personal information to anyone without your direct consent.
+**2025-11-01** — Bats Are In The Building: Understanding Anthropogenic Roost Selection Through Habitat Models. Ecological Society of Australia Conference. Australia.
 
-### Log Files
+**2025-12-01** — Stressed out bats: developing tools to monitor physiological stress in three insectivorous species. Australian and New Zealand Society for Comparative Physiology and Biochemistry Meeting, Australia.
 
-Like many other websites, this site uses log files to help learn about when, from where, and how often traffic flows to this site. The information in these log files include:
 
-* Internet Protocol addresses (IP)
-* Types of browser
-* Internet Service Provider (ISP)
-* Date and time stamp
-* Referring and exit pages
-* Number of clicks
+**2025-08-01** — No one size fits all: Exploring Anthropogenic roost selection across an Urban Gradient in South East Queensland. 20th International Bat Research Conference, Australia.
 
-All of this information is not linked to anything that is personally identifiable.
 
-### Cookies and Web Beacons
+**2025-08-01** — The system works: post-release survival of rehabilitated insectivorous bats in Australia. 20th International Bat Research Conference, Australia.
 
-When you visit this site "convenience" cookies are stored on your computer when you submit a comment to help you log in faster to [Disqus](https://disqus.com) the next time you leave a comment.
+**2025-07-01** — Home is where the bats are: Bats in man-made structures in South East Queensland. Animal Ecology Seminar Series, The University of the Sunshine Coast, Australia.
 
-Third-party advertisers may also place and read cookies on your browser and/or use web beacons to collect information. This site has no access or control over these cookies. You should review the respective privacy policies on any and all third-party ad servers for more information regarding their practices and how to opt-out.
+**2024-04-01** — From rugs to rocky overhangs: diverse microclimates of natural and anthropogenic bat roosts in South East Queensland. 21st Australasian Bat Society Conference,Australia.
 
-If you wish to disable cookies, you may do so through your web browser options. Instructions for doing so can be found on the specific web browsers' websites.
+**2024-04-01** — Roosting Ecology of Australian Insectivorous Bats, a Public Dataset (Poster). Australasian Bat Society Conference. Australia. *Runner Up Student Poster.
 
-#### Google Analytics
+**2024-10-01** — Roosting Ecology of Australian Insectivorous Bats, a Public Dataset (Poster). North American Bat Society Conference, Mexico.
 
-Google Analytics is a web analytics tool I use to help understand how visitors engage with this website. It reports website trends using cookies and web beacons without identifying individual visitors. You can read [Google Analytics Privacy Policy](https://www.google.com/analytics/learn/privacy.html).
+**2023-11-01** — Working with Bat Landlords to Study the Impacts of Urban Living on Insectivorous Bats in South East Queensland. Australian Citizen Science Conference, Australia.
+
+**2020-02-01** — The Success of a Wildlife Corridor on Tamborine Mountain and the Value of Landcare. Wildlife Preservation Society Scenic Rim Corridors Workshop, Australia
+
+**2019-12-01** — The Scenic Rim and Its Potential Role as an Ethical Wildlife Tourism Destination. The Scenic Rim as an Environmentally-Sustainable International Wildlife Destination Workshop, Australia.
+
+**2018-10-01** — Can Glow-worm Ecotourism Lead to Increased Conservation Knowledge and Positive Intentions Towards Glow-worms in the Wild? 5th National Wildlife Tourism Australia Conference, Australia.
+
+**2015-04-01** — Can Mongoose Lemurs Recognize Individual Humans? (Poster). 23rd International Conference on Comparative Cognition, USA.
+
+**2016-04-01** — Do Common Bottlenose Dolphins That Interact with Humans Experience Greater Rates of Anthropogenic Injuries? Southeast and Mid-Atlantic Marine Mammal Symposium, USA. *Best Undergraduate Oral Presentation
+
+<!-- AUTO:PRESENTATIONS:END -->

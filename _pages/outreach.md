@@ -1,39 +1,41 @@
 ---
-permalink: /terms/
-title: "Terms and Privacy Policy"
-modified: 2016-06-06
+layout: archive
+title: "Outreach"
+permalink: /outreach/
+author_profile: true
 ---
 
-{% include base_path %}
-{% include toc %}
+# Outreach
 
-## Privacy Policy
+<!-- AUTO:OUTREACH:START -->
 
-The privacy of my visitors is extremely important. This Privacy Policy outlines the types of personal information that is received and collected and how it is used.
+**2026-03-01** — Bat Workshop and Echolocation Walk, Moreton Bay Council.
 
-First and foremost, I will never share your email address or any other personal information to anyone without your direct consent.
+**2026-03-01** — Invited Speaker and Exhibit Consultant. Queensland Museum Bat Night Market Exhibit. World Science Festival Brisbane.
 
-### Log Files
+**2025-11-01** — Bats in Buildings on the Sunshine Coast. Maleny Bat Night hosted by the Sunshine Coast Council.
 
-Like many other websites, this site uses log files to help learn about when, from where, and how often traffic flows to this site. The information in these log files include:
 
-* Internet Protocol addresses (IP)
-* Types of browser
-* Internet Service Provider (ISP)
-* Date and time stamp
-* Referring and exit pages
-* Number of clicks
+**2025-10-01** — Bats of the Sunshine Coast Workshop and Bat Walk. Mooloolah River Landcare.
 
-All of this information is not linked to anything that is personally identifiable.
 
-### Cookies and Web Beacons
+**2025-10-01** — Bats in Your Backyard: Crash Course to the Bats of SEQ. 'What's Brewing Behind the Dunes Series', Coolum CoastCare.
 
-When you visit this site "convenience" cookies are stored on your computer when you submit a comment to help you log in faster to [Disqus](https://disqus.com) the next time you leave a comment.
+**2024-11-01** — Bat Workshop and Spotlighting Walk. UniSC Ecological Society.
 
-Third-party advertisers may also place and read cookies on your browser and/or use web beacons to collect information. This site has no access or control over these cookies. You should review the respective privacy policies on any and all third-party ad servers for more information regarding their practices and how to opt-out.
 
-If you wish to disable cookies, you may do so through your web browser options. Instructions for doing so can be found on the specific web browsers' websites.
+**2024-10-01** — Impacts of Urban Living on Insectivorous Bats. Maleny Bat Night hosted by the Sunshine Coast Council.
 
-#### Google Analytics
+**2024-10-01** — Bat Workshop and Echolocation Walk, Moreton Bay Council.
 
-Google Analytics is a web analytics tool I use to help understand how visitors engage with this website. It reports website trends using cookies and web beacons without identifying individual visitors. You can read [Google Analytics Privacy Policy](https://www.google.com/analytics/learn/privacy.html).
+
+**2024-09-01** — Bat Call Walk and Workshop Leader. Springfield Lakes Nature Centre.
+
+**2024-05-01** — Bats and Forests: We Need Bats More Than You Think! Maleny Wood Expo, Maleny, QLD
+
+**2024-04-01** — Bat Call Walk Leader, Microbat Discovery Walk Series. Brisbane Catchments Network.
+
+**2023-10-01** — Sunshine Coast Citizen Science Bat Walk, Sunshine Coast BioBlitz.
+
+
+<!-- AUTO:OUTREACH:END -->
