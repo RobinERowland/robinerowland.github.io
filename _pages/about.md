@@ -15,13 +15,13 @@ An open-access database of verified roost associations for Australian bats, deve
 
 ## Bats in Buildings in South East Queensland
 
-This project investigates where bats use buildings as roosts in South East Queensland and examines the impacts that living in anthropogenic structures has on roost residents. 
-
-### Student Research
-
-- **1 Undergraduate Research Project**
-- **1 Honours Research Project**
+This research project is the core project of my PhD, and investigates where bats use buildings as roosts in South East Queensland and examines the impacts that living in anthropogenic structures has on roost residents. 
 
 [**Have records of bats in buildings? Let us know!**](mailto:robinerowland@gmail.com)
 
 ---
+## Insectivorous Bat Rehabilitation Success
+
+In 2024, we worked with wildlife rehabilitators to see if rehabilitated insectivorous bats survived post release through a large-scale radio-tracking project. Currently in review, see the plain-language summary of what we found here: 
+* [**Download Layman's Summary (PDF)**]({{ site.baseurl }}/files/Laymans Summary.pdf){:target="_blank"}
+
