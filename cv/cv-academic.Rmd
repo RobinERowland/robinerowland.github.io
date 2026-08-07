@@ -21,6 +21,7 @@ NOTE: this file assumes the following all live in the SAME flat folder as this
 Rmd (no subfolders):
   - academic_cv.css
   - utility-functions.R  (for blank_year_when_repeated(), add_leading_zeroes_and_letter(), etc.)
+  - cv_date_helpers.R    (shared date formatting used by the website and PDF)
   - cv_data.xlsx
 from the template this was adapted from. If you reorganise into subfolders later,
 update the css: and source() paths above to match.
@@ -39,15 +40,21 @@ library(knitr)
 library(glue)
 library(fontawesome)
 library(readxl)
-library(lubridate)
 source("utility-functions.R")
+source("cv_date_helpers.R")
 
-cv_entries <- read_excel("cv_data.xlsx", sheet = "cv_entries") |>
-  # provide range for entries with a date_end (e.g. '2013-2016', or '2023 --- present')
-  mutate(year_end = if_else(date_end == "present", "present", str_sub(as.character(date_end), start = 1, end = 4)),
-         year = if_else(!is.na(year_end) & year(date) != year_end,
-                        str_c(year(date), " - ", year_end),
-                        as.character(year(date))))
+cv_entries <- read_excel(
+  "cv_data.xlsx",
+  sheet = "cv_entries",
+  # Preserve year-only versus month-year precision from Excel.
+  col_types = c("guess", "text", "text", rep("guess", 9))
+) |>
+  mutate(
+    # Keep exactly the useful precision from the spreadsheet:
+    # 2026 -> 2026; Apr-2026 -> Apr-2026; 28-Apr-2026 -> Apr-2026.
+    year = format_cv_date_range(date, date_end),
+    date_sort = cv_date_sort(date)
+  )
 ```
 
 ::: {.title-and-contact}
@@ -112,7 +119,7 @@ cv_entries |>
   filter(type == 'service', is.na(exclude)) |>
   mutate(where = if_else(!is.na(url), glue("[{where}]({url})"), where)) |>
   mutate(what = glue("<span class='cv-entry-title'>{what}</span>, {where}")) |>
-  arrange(desc(date)) |>
+  arrange(desc(date_sort)) |>
   select(year, what) |>
   kable()
 ```
@@ -125,7 +132,7 @@ cv_entries |>
                         glue("<span class='cv-entry-title'>{what}</span>, {where}"),
                         glue("<span class='cv-entry-title'>{what}</span> ({amount}), {where}"))) |>
   mutate(what = if_else(is.na(additional_info), what, glue("{what}<br>{additional_info}"))) |>
-  arrange(desc(date)) |>
+  arrange(desc(date_sort)) |>
   select(year, what) |>
   kable()
 ```
@@ -140,7 +147,7 @@ cv_entries |>
     TRUE ~ where
   )) |>
   mutate(what = glue("<span class='cv-entry-title'>{host}</span><br>{what}")) |>
-  arrange(desc(date)) |>
+  arrange(desc(date_sort)) |>
   select(year, what) |>
   kable()
 ```
@@ -152,7 +159,7 @@ cv_entries |>
   mutate(format_label = if_else(!is.na(format), glue("{format} --- "), "")) |>
   mutate(what = glue("<span class='cv-entry-title'>{what}</span><br>{format_label}{where}")) |>
   mutate(what = if_else(is.na(additional_info), what, glue("{what}, {additional_info}"))) |>
-  arrange(desc(date)) |>
+  arrange(desc(date_sort)) |>
   select(year, what) |>
   kable()
 ```
@@ -163,7 +170,7 @@ cv_entries |>
   filter(type == 'sci_comm', is.na(exclude)) |>
   mutate(what = if_else(!is.na(url), glue("[{what}]({url})"), what)) |>
   mutate(what = glue("<span class='cv-entry-title'>{where}</span>, {what}")) |>
-  arrange(desc(date)) |>
+  arrange(desc(date_sort)) |>
   select(year, what) |>
   kable()
 ```
@@ -174,7 +181,7 @@ cv_entries |>
   filter(type == 'outreach', is.na(exclude)) |>
   mutate(what = glue("<span class='cv-entry-title'>{what}</span>, {where}")) |>
   mutate(what = if_else(is.na(additional_info), what, glue("{what}<br>{additional_info}"))) |>
-  arrange(desc(date)) |>
+  arrange(desc(date_sort)) |>
   select(year, what) |>
   kable()
 ```

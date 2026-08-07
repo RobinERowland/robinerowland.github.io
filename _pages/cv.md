@@ -171,13 +171,13 @@ Eckerd College, USA
 
 <!-- AUTO:SCIENCE_COMMUNICATION:START -->
 
-**28-Jan-2026** — Commenting on Noosa Flying Fox Mass Entanglement Event<br>
-**25-Jan-2026** — Commenting on Annual Influx of Little Red Flying Foxes in the Region<br>
-**28-Aug-2024** — [Commenting on Arson Incident on Mooloolah Valley Bat Colony](https://www.abc.net.au/news/2024-08-28/arsonists-kill-48-little-bent-winged-bats-sunshine-coast/104278398)<br>
-**25-Jul-2024** — [Microbats, Chicken Nuggets, Stress and Wildlife Rescue!](https://open.spotify.com/episode/2CKIDzUEnoRh8V33f3JMRy?si=SQ1X5U1rS2q_-QFs9SOf9w)<br>
-**23-Feb-2024** — [Study to Help Save Mini Bats That Fly Under the Radar](https://www.sunshinecoastnews.com.au/2024/02/23/study-to-help-save-tiny-bats-that-fly-under-the-radar/)<br>
-**09-Feb-2024** — Research to Save Tiny Bats from Housing Crisis<br>
-**25-Jul-2023** — [Little Forest Bats: Earth's Tiniest Heroes (Australian Mammal of the Year Profile)](https://cosmosmagazine.com/nature/amoty/little-forest-bats-earths-tiniest-heroes/)
+**Jan-2026** — Commenting on Noosa Flying Fox Mass Entanglement Event<br>
+**Jan-2026** — Commenting on Annual Influx of Little Red Flying Foxes in the Region<br>
+**Aug-2024** — [Commenting on Arson Incident on Mooloolah Valley Bat Colony](https://www.abc.net.au/news/2024-08-28/arsonists-kill-48-little-bent-winged-bats-sunshine-coast/104278398)<br>
+**Jul-2024** — [Microbats, Chicken Nuggets, Stress and Wildlife Rescue!](https://open.spotify.com/episode/2CKIDzUEnoRh8V33f3JMRy?si=SQ1X5U1rS2q_-QFs9SOf9w)<br>
+**Feb-2024** — [Study to Help Save Mini Bats That Fly Under the Radar](https://www.sunshinecoastnews.com.au/2024/02/23/study-to-help-save-tiny-bats-that-fly-under-the-radar/)<br>
+**Feb-2024** — Research to Save Tiny Bats from Housing Crisis<br>
+**Jul-2023** — [Little Forest Bats: Earth's Tiniest Heroes (Australian Mammal of the Year Profile)](https://cosmosmagazine.com/nature/amoty/little-forest-bats-earths-tiniest-heroes/)
 
 <!-- AUTO:SCIENCE_COMMUNICATION:END -->
 

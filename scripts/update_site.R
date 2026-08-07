@@ -1,6 +1,9 @@
 library(readxl)
 library(dplyr)
 
+# Use exactly the same date rules as the printed CV.
+source("cv/cv_date_helpers.R")
+
 # ============================================================
 # HELPER FUNCTIONS
 # ============================================================
@@ -66,76 +69,17 @@ replace_section <- function(file, section, new_text) {
 }
 
 
-# Smart date formatter preserving exact input precision
-format_date <- function(x) {
-  if (
-    length(x) == 0 ||
-    is.na(x) ||
-    trimws(as.character(x)) == ""
-  ) {
-    return("")
-  }
-  
-  x_chr <- trimws(as.character(x))
-  
-  # If it's Excel numeric date
-  if (is.numeric(x) || grepl("^\\d{5}$", x_chr)) {
-    d <- as.Date(suppressWarnings(as.numeric(x_chr)), origin = "1899-12-30")
-    if (!is.na(d)) {
-      return(format(d, "%d-%b-%Y"))
-    }
-  }
-  
-  # If already formatted as Year only (e.g., 2023)
-  if (grepl("^\\d{4}$", x_chr)) {
-    return(x_chr)
-  }
-  
-  # Try parsing standard formats to see input precision
-  formats <- c(
-    "%Y-%m-%d", "%d/%m/%Y", "%d-%m-%Y", 
-    "%d-%b-%Y", "%d-%B-%Y", "%b-%Y", 
-    "%B-%Y", "%b %Y", "%B %Y", "%Y-%m"
-  )
-  
-  for (fmt in formats) {
-    d <- suppressWarnings(as.Date(x_chr, format = fmt))
-    if (!is.na(d)) {
-      # Check if original string contained a day or just month/year or year
-      if (grepl("^\\d{4}$", x_chr)) {
-        return(format(d, "%Y"))
-      } else if (grepl("^\\d{4}-\\d{2}$", x_chr) || grepl("^[A-Za-z]{3}-\\d{4}$", x_chr)) {
-        return(format(d, "%b-%Y"))
-      } else if (grepl("\\d{1,2}[-/][A-Za-z]+[-/]\\d{4}", x_chr) || grepl("\\d{4}-\\d{2}-\\d{2}", x_chr)) {
-        return(format(d, "%d-%b-%Y"))
-      } else {
-        return(format(d, "%b-%Y"))
-      }
-    }
-  }
-  
-  # Return original string if it's text like "present"
-  x_chr
-}
-
-# Helper to combine start and end dates nicely
-format_date_range <- function(start_val, end_val) {
-  start_fmt <- format_date(start_val)
-  end_fmt <- format_date(end_val)
-  
-  if (end_fmt == "" || is.na(end_val) || trimws(as.character(end_val)) == "") {
-    return(start_fmt)
-  } else {
-    return(paste0(start_fmt, " – ", end_fmt))
-  }
-}
-
-
 # ============================================================
 # READ CV DATA MASTER SHEET
 # ============================================================
 
-cv_data <- read_excel("cv/cv_data.xlsx", sheet = "cv_entries")
+cv_data <- read_excel(
+  "cv/cv_data.xlsx",
+  sheet = "cv_entries",
+  # Keep date and date_end as text so a year-only entry can never be
+  # silently converted into a full Excel date.
+  col_types = c("guess", "text", "text", rep("guess", 9))
+)
 
 if ("exclude" %in% names(cv_data)) {
   cv_data <- cv_data %>% filter(is.na(exclude) | exclude != 1)
@@ -156,7 +100,7 @@ service       <- cv_data %>% filter(type == "service")
 outreach_entries <- vapply(
   seq_len(nrow(outreach)),
   function(i) {
-    date <- format_date_range(outreach$date[i], outreach$date_end[i])
+    date <- format_cv_date_range(outreach$date[i], outreach$date_end[i])
     details <- outreach$what[i]
     paste0("**", date, "** — ", details)
   },
@@ -174,7 +118,7 @@ replace_section("_pages/cv.md", "OUTREACH", paste(outreach_entries, collapse = "
 presentation_entries <- vapply(
   seq_len(nrow(presentations)),
   function(i) {
-    date <- format_date_range(presentations$date[i], presentations$date_end[i])
+    date <- format_cv_date_range(presentations$date[i], presentations$date_end[i])
     details <- presentations$what[i]
     paste0("**", date, "** — ", details)
   },
@@ -192,7 +136,7 @@ replace_section("_pages/cv.md", "PRESENTATIONS", paste(presentation_entries, col
 seminar_entries <- vapply(
   seq_len(nrow(seminars)),
   function(i) {
-    date <- format_date_range(seminars$date[i], seminars$date_end[i])
+    date <- format_cv_date_range(seminars$date[i], seminars$date_end[i])
     details <- seminars$what[i]
     paste0("**", date, "** — ", details)
   },
@@ -209,7 +153,7 @@ replace_section("_pages/cv.md", "INVITED_SEMINARS", paste(seminar_entries, colla
 grant_entries <- vapply(
   seq_len(nrow(grants)),
   function(i) {
-    date <- format_date_range(grants$date[i], grants$date_end[i])
+    date <- format_cv_date_range(grants$date[i], grants$date_end[i])
     amount <- grants$amount[i]
     funder <- grants$where[i]
     project <- grants$what[i]
@@ -234,7 +178,7 @@ replace_section("_pages/cv.md", "GRANTS", paste(grant_entries, collapse = "<br>\
 science_entries <- vapply(
   seq_len(nrow(science)),
   function(i) {
-    date <- format_date_range(science$date[i], science$date_end[i])
+    date <- format_cv_date_range(science$date[i], science$date_end[i])
     talk <- science$what[i]
     link <- science$url[i]
     
@@ -266,7 +210,7 @@ service_entries <- vapply(
     if (is.na(raw_date) || trimws(as.character(raw_date)) == "") {
       paste0("&nbsp;&nbsp;&nbsp;&nbsp;", role)
     } else {
-      date <- format_date_range(raw_date, raw_end)
+      date <- format_cv_date_range(raw_date, raw_end)
       paste0("**", date, "** — ", role)
     }
   },
