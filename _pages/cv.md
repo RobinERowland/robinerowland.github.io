@@ -123,14 +123,14 @@ Eckerd College, USA
 
 <!-- AUTO:GRANTS:START -->
 
-**2023 – 2026 — $$20,720 AUD** — **Holsworth Wildlife Research Endowment** — *Insectivorous Bats in South East Queensland* — Lead Author<br>
-**2025 — $$21,851 AUD** — **GBatNet Global Union of Bat Diversity Networks** — *Data Deficient Bat Working Group Funding* — Co-investigator<br>
-**2024 — $$49,586 AUD** — **WIRES National Research Grant** — *Establishing vital roost characteristics to facilitate urban insectivorous bat conservation* — Co-investigator<br>
-**2023 — $$2,720 AUD** — **Holohil Transmitter Grant Program** — *Radio Transmitters for Insectivorous Bats* — Lead Author<br>
-**2021 — $$49,000 AUD** — **Landcare Led Bushfire Recovery Grants** — *Wildlife Corridors in the Scenic Rim* — Lead Author<br>
-**2020 — $$1,950 AUD** — **Logan EnviroGrants** — *Educational Workshops and Events for Bat Carers* — Lead Author<br>
-**2020 — $$9,900 AUD** — **Logan EnviroGrants** — *ICUs for Bat Carers Capacity Building* — Lead Author<br>
-**2023 — $$1,197 AUD** — **Wildlife Acoustics Scientific Product Grant** — *Bat Roost Identification* — Lead Author
+**2023 – 2026 — $20,720 AUD** — **Holsworth Wildlife Research Endowment** — *Insectivorous Bats in South East Queensland* — Lead Author<br>
+**2025 — $21,851 AUD** — **GBatNet Global Union of Bat Diversity Networks** — *Data Deficient Bat Working Group Funding* — Co-investigator<br>
+**2024 — $49,586 AUD** — **WIRES National Research Grant** — *Establishing vital roost characteristics to facilitate urban insectivorous bat conservation* — Co-investigator<br>
+**2023 — $2,720 AUD** — **Holohil Transmitter Grant Program** — *Radio Transmitters for Insectivorous Bats* — Lead Author<br>
+**2021 — $49,000 AUD** — **Landcare Led Bushfire Recovery Grants** — *Wildlife Corridors in the Scenic Rim* — Lead Author<br>
+**2020 — $1,950 AUD** — **Logan EnviroGrants** — *Educational Workshops and Events for Bat Carers* — Lead Author<br>
+**2020 — $9,900 AUD** — **Logan EnviroGrants** — *ICUs for Bat Carers Capacity Building* — Lead Author<br>
+**2023 — $1,197 AUD** — **Wildlife Acoustics Scientific Product Grant** — *Bat Roost Identification* — Lead Author
 
 <!-- AUTO:GRANTS:END -->
 
