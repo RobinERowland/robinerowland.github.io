@@ -12,10 +12,14 @@
   --root-font-size: 11pt;
   --viewer-pages-spacing: 12px;
   --viewer-shadow-color: #313131; /* this marks the pages */
-  --my-darkgray: #929598;
+  --my-darkgray: #333333;
   --indentation: 18%;
 }
-
+/* Prevent CV entries from splitting across page breaks */
+.cv-entries tr {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
 /* Paged.js viewer */
 @media screen {
   body {
@@ -48,7 +52,7 @@ br.pageBreak {
 }
 
 body {
-  font-family: "Avenir";
+  font-family: "Calibri", "Carlito", "Segoe UI", Arial, sans-serif;
 }
 
 p, li {
@@ -157,20 +161,18 @@ h3 {
   font-weight: bold;
 }
 
+/* Make hyperlinks visible and distinct */
 .cv-entries a,
 .footnotes a {
-  color: #005EA3;
+  color: #0366d6; 
+  text-decoration: underline;
 }
 
-/* footnote links */
-a.footnote-ref {
-  text-decoration: none;
-}
-
-.footnote-ref sup {
-  vertical-align: top;
-  margin-left: 1px;
-  font-weight: normal;
+/* Prevent raw URLs from printing next to the text */
+@media print {
+  a[href]::after {
+    content: none !important;
+  }
 }
 
 /* basic styling for first column in two-column cv entries */

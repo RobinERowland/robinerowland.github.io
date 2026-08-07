@@ -138,31 +138,19 @@ format_date <- function(x) {
 # ============================================================
 # READ EXCEL FILES
 # ============================================================
+cv_data <- read_excel("cv/cv_data.xlsx", sheet = "cv_entries")
 
-grants <- read_excel(
-  "source-data/Grants.xlsx"
-)
+# Filter out excluded rows if the column exists
+if ("exclude" %in% names(cv_data)) {
+  cv_data <- cv_data %>% filter(is.na(exclude) | exclude != 1)
+}
 
-seminars <- read_excel(
-  "source-data/Invited_Seminars.xlsx"
-)
-
-outreach <- read_excel(
-  "source-data/Outreach.xlsx"
-)
-
-presentations <- read_excel(
-  "source-data/Presentations.xlsx"
-)
-
-science <- read_excel(
-  "source-data/Science_Communication.xlsx"
-)
-
-service <- read_excel(
-  "source-data/Service_Roles.xlsx"
-)
-
+outreach     <- cv_data %>% filter(type == "outreach")
+presentations <- cv_data %>% filter(type == "presentations")
+seminars     <- cv_data %>% filter(type == "seminars")
+grants       <- cv_data %>% filter(type == "grants")
+science      <- cv_data %>% filter(type == "sci_comm")
+service      <- cv_data %>% filter(type == "service")
 
 # ============================================================
 # OUTREACH
