@@ -206,8 +206,7 @@ outreach_cv_text <- paste(
 
 replace_section(
   "_pages/outreach.md",
-  "OUTREACH",
-  outreach_page_text
+    outreach_page_text
 )
 
 replace_section(
@@ -262,8 +261,7 @@ presentations_cv_text <- paste(
 
 replace_section(
   "_pages/presentations.md",
-  "PRESENTATIONS",
-  presentations_page_text
+    presentations_page_text
 )
 
 replace_section(

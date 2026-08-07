@@ -16,7 +16,7 @@ library(rmarkdown)
 dir.create("files", recursive = TRUE, showWarnings = FALSE)
 
 rmarkdown::render(
-  input = "cv/cv.Rmd",
+  input = "_pages/cv.md",
   output_file = "Rowland_CV_2026.pdf",
   output_dir = normalizePath("files", mustWork = FALSE),
   clean = TRUE,
