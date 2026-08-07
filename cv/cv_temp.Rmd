@@ -1,14 +1,144 @@
 ---
-layout: archive
-title: "CV"
-permalink: /cv/
-author_profile: true
-redirect_from:
-  - /resume
+title: ""
+output:
+  pagedown::html_paged:
+    self_contained: true
+number_sections: false
+toc: false
 ---
 
-{% include base_path %}
-[**Download CV as PDF**]({{ base_path }}/files/Rowland_CV.pdf)
+<style>
+@page {
+  size: A4;
+  margin: 10mm 14mm 12mm 14mm;
+
+  @top-right {
+    content: "Robin Rowland";
+    font-size: 8pt;
+    color: #666;
+  }
+}
+
+@page:first {
+  @top-right {
+    content: "";
+  }
+}
+
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 9pt !important;
+  line-height: 1.22 !important;
+  color: #111;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Remove pagedown's large default spacing */
+p {
+  margin: 0 0 2px 0 !important;
+}
+
+h1 {
+  font-size: 10pt !important;
+  font-weight: 700;
+  margin: 11px 0 4px 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+h2 {
+  font-size: 9.5pt !important;
+  margin: 7px 0 2px 0 !important;
+}
+
+h3 {
+  font-size: 9pt !important;
+  margin: 5px 0 1px 0 !important;
+}
+
+/* Never display automatic section numbers */
+.header-section-number {
+  display: none !important;
+}
+
+ul {
+  margin: 1px 0 4px 17px !important;
+  padding: 0 !important;
+}
+
+li {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.18 !important;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  color: #39758a;
+  text-decoration: underline;
+}
+
+/* Compact automatic Excel-generated entries */
+.compact-entry {
+  margin: 0 0 2px 0 !important;
+  padding: 0 !important;
+  line-height: 1.18 !important;
+}
+
+/* Avoid massive blocks being pushed to the next page */
+section,
+.cv-entry,
+.compact-entry {
+  break-inside: auto !important;
+  page-break-inside: auto !important;
+}
+
+.cv-top {
+  display: grid;
+  grid-template-columns: 52% 48%;
+  column-gap: 16mm;
+  align-items: start;
+  margin: 0 0 9px 0;
+}
+
+.cv-left,
+.cv-right {
+  margin: 0;
+  padding: 0;
+}
+
+.cv-right {
+  padding-top: 1px;
+  font-size: 9pt;
+  line-height: 1.38;
+}
+
+.cv-name {
+  font-size: 16pt !important;
+  font-weight: 700;
+  margin: 0 0 5px 0 !important;
+}
+
+.skills-heading {
+  font-size: 9pt !important;
+  font-weight: 700;
+  margin: 12px 0 4px 0 !important;
+}
+</style>
+
+
 
 <div class="cv-top">
 
@@ -109,7 +239,6 @@ Eckerd College, USA
 
 # Service Roles
 
-<!-- AUTO:SERVICE_ROLES:START -->
 
 **2026** — Bats in Buildings Working Group Member<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Contributed to FAQ resource for Australian land managers and public<br>
@@ -122,11 +251,9 @@ Eckerd College, USA
 **2019-Present** — Wildlife Rescuer & Workshop Co-Lead, Bats Queensland<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Co-lead and facilitate annual educational workshops on insectivorous bat rehabilitation
 
-<!-- AUTO:SERVICE_ROLES:END -->
 
 # Grants and Awards
 
-<!-- AUTO:GRANTS:START -->
 
 **2024-2026 — $20,720 AUD** — **Holsworth Wildlife Research Endowment** — *Insectivorous Bats in South East Queensland* — Lead Author<br>
 **2025 — $21,851 AUD** — **GBatNet Global Union of Bat Diversity Networks** — *Data Deficient Bat Working Group Funding* — Co-investigator<br>
@@ -137,11 +264,9 @@ Eckerd College, USA
 **2020 — $9,900 AUD** — **Logan EnviroGrants** — *ICUs for Bat Carers Capacity Building* — Lead Author<br>
 **2023 — $1,197 AUD** — ** Wildlife Acoustics Scientific Product Grant** — *Bat Roost Identification* — Lead Author
 
-<!-- AUTO:GRANTS:END -->
 
 # Invited Seminars
 
-<!-- AUTO:INVITED_SEMINARS:START -->
 
 **2026-Apr** — Urban Bat Ecology. GBatNet 'My Field for Dummies' Online Series.<br>
 **2025-Oct** — Bats in Our Backyards - Get to Know Our Nocturnal Neighbours. University of the Third Age Sunshine Coast.<br>
@@ -150,11 +275,9 @@ Eckerd College, USA
 **2024-Sep** — Ecological Careers Workshop, UniSC Ecological Society.
 
 
-<!-- AUTO:INVITED_SEMINARS:END -->
 
 # Presentations and Posters
 
-<!-- AUTO:PRESENTATIONS:START -->
 
 **2026-Aug** — Physiological tools for monitoring urban impacts at the roost level in insectivorous bats. Joint Conference of the Australian Mammal Society and Australasian Bat Society, Australia.<br>
 **2025-Nov** — Bats Are In The Building: Understanding Anthropogenic Roost Selection Through Habitat Models. Ecological Society of Australia Conference. Australia.<br>
@@ -174,11 +297,9 @@ Eckerd College, USA
 **2015-Apr** — Can Mongoose Lemurs Recognize Individual Humans? (Poster). 23rd International Conference on Comparative Cognition, USA.<br>
 **2016-Apr** — Do Common Bottlenose Dolphins That Interact with Humans Experience Greater Rates of Anthropogenic Injuries? Southeast and Mid-Atlantic Marine Mammal Symposium, USA. *Best Undergraduate Oral Presentation
 
-<!-- AUTO:PRESENTATIONS:END -->
 
 # Science Communication
 
-<!-- AUTO:SCIENCE_COMMUNICATION:START -->
 
 **2026-Jan** — Commenting on Noosa Flying Fox Mass Entanglement Event.  ABC Sunshine Coast Radio, Wide Bay, Southern Queensland<br>
 **2026-Jan** — Commenting on Annual Influx of Little Red Flying Foxes in the Region. ABC Sunshine Coast Radio<br>
@@ -188,11 +309,9 @@ Eckerd College, USA
 **2024-Feb** — Research to Save Tiny Bats from Housing Crisis. ABC Sunshine Coast Breakfast Radio<br>
 **2023-Jul** — [Little Forest Bats: Earths Tiniest Heroes, Australian Mammal of the Year Profile. Cosmos Magazine](https://cosmosmagazine.com/nature/amoty/little-forest-bats-earths-tiniest-heroes/)
 
-<!-- AUTO:SCIENCE_COMMUNICATION:END -->
 
 # Outreach
 
-<!-- AUTO:OUTREACH:START -->
 
 **2026-Mar** — Bat Workshop and Echolocation Walk, Moreton Bay Council.<br>
 **2026-Mar** — Invited Speaker and Exhibit Consultant. Queensland Museum Bat Night Market Exhibit. World Science Festival Brisbane.<br>
@@ -212,7 +331,6 @@ Eckerd College, USA
 **2023-Oct** — Sunshine Coast Citizen Science Bat Walk, Sunshine Coast BioBlitz.
 
 
-<!-- AUTO:OUTREACH:END -->
 
 # Skills and Certifications
 

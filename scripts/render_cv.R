@@ -1,69 +1,116 @@
-# ============================================================
-# render_cv.R
-# Creates a styled PDF CV using pagedown + Chrome
-# ============================================================
-
-required_packages <- c(
-  "rmarkdown",
-  "pagedown",
-  "readxl"
-)
-
-installed <- rownames(installed.packages())
-
-missing <- setdiff(
-  required_packages,
-  installed
-)
-
-if (length(missing) > 0) {
-  install.packages(
-    missing,
-    repos = "https://cloud.r-project.org"
-  )
-}
-
 library(rmarkdown)
 library(pagedown)
 
+dir.create("files", recursive = TRUE, showWarnings = FALSE)
+
 # ------------------------------------------------------------
-# Make sure output folder exists
+# Read current CV Markdown
 # ------------------------------------------------------------
 
-dir.create(
-  "files",
-  recursive = TRUE,
-  showWarnings = FALSE
+cv_lines <- readLines(
+  "_pages/cv.md",
+  warn = FALSE,
+  encoding = "UTF-8"
 )
 
 # ------------------------------------------------------------
-# Render the special PDF CV template to HTML
+# Remove Jekyll YAML header
+# ------------------------------------------------------------
+
+yaml_marks <- which(trimws(cv_lines) == "---")
+
+if (length(yaml_marks) >= 2) {
+  cv_lines <- cv_lines[-seq(yaml_marks[1], yaml_marks[2])]
+}
+
+# ------------------------------------------------------------
+# Remove Jekyll/Liquid lines
+# ------------------------------------------------------------
+
+cv_lines <- cv_lines[
+  !grepl("\\{%.*%\\}", cv_lines)
+]
+
+# Remove AUTO markers
+cv_lines <- cv_lines[
+  !grepl("<!-- AUTO:", cv_lines, fixed = TRUE)
+]
+
+# Remove website download link from PDF itself
+cv_lines <- cv_lines[
+  !grepl("Download CV as PDF", cv_lines, fixed = TRUE)
+]
+
+# ------------------------------------------------------------
+# Read CSS
+# ------------------------------------------------------------
+
+css_lines <- readLines(
+  "cv/cv.css",
+  warn = FALSE,
+  encoding = "UTF-8"
+)
+
+# ------------------------------------------------------------
+# Build temporary R Markdown file
+# CSS is embedded directly in the document
+# ------------------------------------------------------------
+
+pdf_rmd <- c(
+  "---",
+  "title: \"\"",
+  "output:",
+  "  pagedown::html_paged:",
+  "    self_contained: true",
+  "number_sections: false",
+  "toc: false",
+  "---",
+  "",
+  "<style>",
+  css_lines,
+  "</style>",
+  "",
+  cv_lines
+)
+
+writeLines(
+  pdf_rmd,
+  "cv/cv_temp.Rmd",
+  useBytes = TRUE
+)
+
+# ------------------------------------------------------------
+# Render HTML
 # ------------------------------------------------------------
 
 rmarkdown::render(
-  input = "cv/cv_pdf.Rmd",
+  input = "cv/cv_temp.Rmd",
   output_file = "Rowland_CV.html",
   output_dir = "files",
   quiet = FALSE
 )
 
 # ------------------------------------------------------------
-# Convert HTML to PDF using Chrome
+# Convert HTML to PDF
 # ------------------------------------------------------------
 
 pagedown::chrome_print(
-  input = "files/Rowland_CV.html",
-  output = "files/Rowland_CV.pdf"
+  input = normalizePath(
+    "files/Rowland_CV.html",
+    winslash = "/"
+  ),
+  output = normalizePath(
+    "files/Rowland_CV.pdf",
+    winslash = "/",
+    mustWork = FALSE
+  )
 )
 
 # ------------------------------------------------------------
-# Remove temporary HTML
+# Clean temporary files
 # ------------------------------------------------------------
 
-unlink(
-  "files/Rowland_CV.html"
-)
+unlink("cv/cv_temp.Rmd")
+unlink("files/Rowland_CV.html")
 
-message(
-  "PDF CV successfully created: files/Rowland_CV.pdf"
-)
+message("PDF CV created: files/Rowland_CV.pdf")
