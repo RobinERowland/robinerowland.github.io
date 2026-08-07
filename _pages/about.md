@@ -15,7 +15,7 @@ An open-access database of verified roost associations for Australian bats, deve
 
 ## Bats in Buildings in South East Queensland
 
-This project investigates where bats use buildings as roosts in South East Queensland and examines the impacts that living in anthropogenic structures has on roost residents.
+This project investigates where bats use buildings as roosts in South East Queensland and examines the impacts that living in anthropogenic structures has on roost residents. 
 
 ### Student Research
 
