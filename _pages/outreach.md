@@ -7,28 +7,28 @@ author_profile: true
 
 <!-- AUTO:OUTREACH:START -->
 
-**2026-Mar** — Bat Workshop and Echolocation Walk
+**Mar-2026** — Bat Workshop and Echolocation Walk
 
-**2026-Mar** — Invited Speaker and Exhibit Consultant, Queensland Museum Bat Night Market Exhibit
+**Mar-2026** — Invited Speaker and Exhibit Consultant, Queensland Museum Bat Night Market Exhibit
 
-**2025-Nov** — Bats in Buildings on the Sunshine Coast, Maleny Bat Night
+**Nov-2025** — Bats in Buildings on the Sunshine Coast, Maleny Bat Night
 
-**2025-Oct** — Bats of the Sunshine Coast Workshop and Bat Walk
+**Oct-2025** — Bats of the Sunshine Coast Workshop and Bat Walk
 
-**2025-Oct** — Bats in Your Backyard: Crash Course to the Bats of SEQ ('What's Brewing Behind the Dunes' Series)
+**Oct-2025** — Bats in Your Backyard: Crash Course to the Bats of SEQ ('What's Brewing Behind the Dunes' Series)
 
-**2024-Nov** — Bat Workshop and Spotlighting Walk
+**Nov-2024** — Bat Workshop and Spotlighting Walk
 
-**2024-Oct** — Impacts of Urban Living on Insectivorous Bats, Maleny Bat Night
+**Oct-2024** — Impacts of Urban Living on Insectivorous Bats, Maleny Bat Night
 
-**2024-Oct** — Bat Workshop and Echolocation Walk
+**Oct-2024** — Bat Workshop and Echolocation Walk
 
-**2024-Sep** — Bat Call Walk and Workshop Leader
+**Sep-2024** — Bat Call Walk and Workshop Leader
 
-**2024-May** — Bats and Forests: We Need Bats More Than You Think!
+**May-2024** — Bats and Forests: We Need Bats More Than You Think!
 
-**2024-Apr** — Bat Call Walk Leader, Microbat Discovery Walk Series
+**Apr-2024** — Bat Call Walk Leader, Microbat Discovery Walk Series
 
-**2023-Oct** — Sunshine Coast Citizen Science Bat Walk
+**Oct-2023** — Sunshine Coast Citizen Science Bat Walk
 
 <!-- AUTO:OUTREACH:END -->
