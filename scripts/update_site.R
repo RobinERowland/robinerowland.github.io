@@ -119,7 +119,14 @@ presentation_entries <- vapply(
   function(i) {
     date <- format_cv_date_range(presentations$date[i], presentations$date_end[i])
     details <- presentations$what[i]
-    paste0("**", date, "** — ", details)
+    where <- presentations$where[i]
+    
+    paste0(
+      "**", date, "** — ",
+      details,
+      " — ",
+      where
+    )
   },
   character(1)
 )
