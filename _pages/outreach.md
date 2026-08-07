@@ -4,8 +4,6 @@ permalink: /outreach/
 author_profile: true
 ---
 
-# Outreach
-
 <!-- AUTO:OUTREACH:START -->
 
 **2026-Mar** — Bat Workshop and Echolocation Walk, Moreton Bay Council.

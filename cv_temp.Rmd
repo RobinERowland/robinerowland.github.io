@@ -1,14 +1,11 @@
 ---
-layout: archive
-title: "CV"
-permalink: /cv/
-author_profile: true
-redirect_from:
-  - /resume
+title: "Robin Rowland"
+output:
+  pagedown::html_paged:
+    self_contained: true
 ---
 
-{% include base_path %}
-[**Download CV as PDF**]({{ base_path }}/files/Rowland_CV.pdf)
+
 
 Wildlife ecologist with demonstrated experience in data management, technical analysis and reporting, and stakeholder engagement across academic, government, and community partners. Skilled in maintaining large ecological datasets and communicating complex scientific information to diverse audiences. Proven project coordination and committee experience, with strong statistical analysis skills in R.
 
@@ -85,7 +82,6 @@ Eckerd College, USA
 
 # Service Roles
 
-<!-- AUTO:SERVICE_ROLES:START -->
 
 **2026** — Bats in Buildings Working Group Member<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Contributed to FAQ resource for Australian land managers and public<br>
@@ -98,11 +94,9 @@ Eckerd College, USA
 **2019-Present** — Wildlife Rescuer & Workshop Co-Lead, Bats Queensland<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Co-lead and facilitate annual educational workshops on insectivorous bat rehabilitation
 
-<!-- AUTO:SERVICE_ROLES:END -->
 
 # Grants and Awards
 
-<!-- AUTO:GRANTS:START -->
 
 **2024-2026 — $20,720 AUD** — **Holsworth Wildlife Research Endowment** — *Insectivorous Bats in South East Queensland* — Lead Author<br>
 **2025 — $21,851 AUD** — **GBatNet Global Union of Bat Diversity Networks** — *Data Deficient Bat Working Group Funding* — Co-investigator<br>
@@ -113,11 +107,9 @@ Eckerd College, USA
 **2020 — $9,900 AUD** — **Logan EnviroGrants** — *ICUs for Bat Carers Capacity Building* — Lead Author<br>
 **2023 — $1,197 AUD** — ** Wildlife Acoustics Scientific Product Grant** — *Bat Roost Identification* — Lead Author
 
-<!-- AUTO:GRANTS:END -->
 
 # Invited Seminars
 
-<!-- AUTO:INVITED_SEMINARS:START -->
 
 **2026-Apr** — Urban Bat Ecology. GBatNet 'My Field for Dummies' Online Series.<br>
 **2025-Oct** — Bats in Our Backyards - Get to Know Our Nocturnal Neighbours. University of the Third Age Sunshine Coast.<br>
@@ -126,11 +118,9 @@ Eckerd College, USA
 **2024-Sep** — Ecological Careers Workshop, UniSC Ecological Society.
 
 
-<!-- AUTO:INVITED_SEMINARS:END -->
 
 # Presentations and Posters
 
-<!-- AUTO:PRESENTATIONS:START -->
 
 **2026-Aug** — Physiological tools for monitoring urban impacts at the roost level in insectivorous bats. Joint Conference of the Australian Mammal Society and Australasian Bat Society, Australia.<br>
 **2025-Nov** — Bats Are In The Building: Understanding Anthropogenic Roost Selection Through Habitat Models. Ecological Society of Australia Conference. Australia.<br>
@@ -150,11 +140,9 @@ Eckerd College, USA
 **2015-Apr** — Can Mongoose Lemurs Recognize Individual Humans? (Poster). 23rd International Conference on Comparative Cognition, USA.<br>
 **2016-Apr** — Do Common Bottlenose Dolphins That Interact with Humans Experience Greater Rates of Anthropogenic Injuries? Southeast and Mid-Atlantic Marine Mammal Symposium, USA. *Best Undergraduate Oral Presentation
 
-<!-- AUTO:PRESENTATIONS:END -->
 
 # Science Communication
 
-<!-- AUTO:SCIENCE_COMMUNICATION:START -->
 
 **2026-Jan** — Commenting on Noosa Flying Fox Mass Entanglement Event.  ABC Sunshine Coast Radio, Wide Bay, Southern Queensland<br>
 **2026-Jan** — Commenting on Annual Influx of Little Red Flying Foxes in the Region. ABC Sunshine Coast Radio<br>
@@ -164,11 +152,9 @@ Eckerd College, USA
 **2024-Feb** — Research to Save Tiny Bats from Housing Crisis. ABC Sunshine Coast Breakfast Radio<br>
 **2023-Jul** — [Little Forest Bats: Earths Tiniest Heroes, Australian Mammal of the Year Profile. Cosmos Magazine](https://cosmosmagazine.com/nature/amoty/little-forest-bats-earths-tiniest-heroes/)
 
-<!-- AUTO:SCIENCE_COMMUNICATION:END -->
 
 # Outreach
 
-<!-- AUTO:OUTREACH:START -->
 
 **2026-Mar** — Bat Workshop and Echolocation Walk, Moreton Bay Council.<br>
 **2026-Mar** — Invited Speaker and Exhibit Consultant. Queensland Museum Bat Night Market Exhibit. World Science Festival Brisbane.<br>
@@ -188,7 +174,6 @@ Eckerd College, USA
 **2023-Oct** — Sunshine Coast Citizen Science Bat Walk, Sunshine Coast BioBlitz.
 
 
-<!-- AUTO:OUTREACH:END -->
 
 # Skills and Certifications
 

@@ -4,8 +4,6 @@ permalink: /presentations/
 author_profile: true
 ---
 
-# Presentations
-
 <!-- AUTO:PRESENTATIONS:START -->
 
 **2026-Aug** — Physiological tools for monitoring urban impacts at the roost level in insectivorous bats. Joint Conference of the Australian Mammal Society and Australasian Bat Society, Australia.
