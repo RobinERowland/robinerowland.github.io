@@ -266,4 +266,5 @@ Lead Author
 
 # Referees
 
-Available on request.
+Dr. Clare Stawski (Primary Supervisor): cstawskiatusc.edu.au, Lecturer University of the Sunshine Coast 
+Dr. Alexis Levengood (Co-Supervisor): alevengoatusc.edu.au, Research Fellow University of the Sunshine Coast
