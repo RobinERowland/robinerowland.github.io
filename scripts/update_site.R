@@ -42,10 +42,26 @@ replace_section <- function(file, section, new_text) {
 format_date <- function(x) {
   
   if (inherits(x, "Date")) {
-    return(format(x, "%b %Y"))
+    return(format(x, "%Y-%b"))
   }
   
-  as.character(x)
+  # Handle Excel-style numeric dates if readxl returns them as numbers
+  if (is.numeric(x) && !is.na(x)) {
+    x <- as.Date(x, origin = "1899-12-30")
+    return(format(x, "%Y-%b"))
+  }
+  
+  # Try converting character dates
+  x_chr <- as.character(x)
+  
+  parsed <- suppressWarnings(as.Date(x_chr))
+  
+  if (!is.na(parsed)) {
+    return(format(parsed, "%Y-%b"))
+  }
+  
+  # If it is already something like "2024-Aug", leave it alone
+  x_chr
 }
 
 
