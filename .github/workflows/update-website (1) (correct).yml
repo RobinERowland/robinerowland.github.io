@@ -42,21 +42,17 @@ jobs:
             any::purrr
             any::readr
             any::rmarkdown
-            any::pagedown
-            any::tidyverse
-            any::knitr
-            any::glue
-            any::tidyr
-            any::fontawesome
 
-      - name: Update website pages and render CV PDF
+      - name: Update website pages from Excel
+        run: Rscript scripts/update_site.R
+
+      - name: Render CV PDF
         run: Rscript scripts/render_cv.R
 
       - name: Commit generated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add _pages
-          git add -f files/Rowland_CV.pdf
+          git add _data _pages cv/generated files/Rowland_CV.pdf
           git diff --cached --quiet || git commit -m "Automatically update website and CV"
           git push
