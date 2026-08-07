@@ -65,10 +65,9 @@ cv_entries <- read_excel(
 
 :::::: {.contact-info}
 PhD Candidate  \
-robinerowland@gmail.com  \
-0421 902 622  \
+robinerowland6143@gmail.com  \
 Sippy Downs, QLD  \
-[LinkedIn](#) <!-- add your LinkedIn URL here -->
+[LinkedIn](#) <https://www.linkedin.com/in/robin-rowland-3b16a3152/>
 ::::::
 
 :::
@@ -203,8 +202,8 @@ tibble::tribble(
 ```{r}
 tibble::tribble(
   ~what,
-  "<span class='cv-entry-title'>Dr Clare Stawski</span> (Primary Supervisor) --- Senior Lecturer, University of the Sunshine Coast<br>cstawski@usc.edu.au &nbsp;|&nbsp; 07 5459 4761",
-  "<span class='cv-entry-title'>Dr Alexis Levengood</span> (Co-Supervisor and Field Course Leader) --- Research Fellow, University of the Sunshine Coast<br>alevengo@usc.edu.au &nbsp;|&nbsp; 04 5756 6657"
+  "<span class='cv-entry-title'>Dr Clare Stawski</span> (Primary Supervisor) --- Senior Lecturer, University of the Sunshine Coast<br>cstawski@usc.edu.au &nbsp;|&nbsp;",
+  "<span class='cv-entry-title'>Dr Alexis Levengood</span> (Co-Supervisor and Field Course Leader) --- Research Fellow, University of the Sunshine Coast<br>alevengo@usc.edu.au &nbsp;|&nbsp;"
 ) |>
   kable(col.names = NULL)
 ```
