@@ -25,5 +25,5 @@ This research project is the core project of my PhD, and investigates where bats
 In 2024, we worked with wildlife rehabilitators to see if rehabilitated insectivorous bats survived post release through a large-scale radio-tracking project. Currently in review, see the plain-language summary of what we found here: 
 * [**Download Plain Language Summary (PDF)**]({{ site.baseurl }}/files/Plain Language Summary Rehab Bats.pdf){:target="_blank"}
 <iframe src="{{ site.baseurl }}/files/Plain Language Summary Rehab Bats.pdf" width="100%" height="600px" style="border: none;">
-  <p>Your browser does not support PDFs. <a href="{{ site.baseurl }}/files/Laymans Summary.pdf">Download the PDF</a>.</p>
+  <p>Your browser does not support PDFs. <a href="{{ site.baseurl }}/files/Plain Language Summary Rehab Bats.pdf">Download the PDF</a>.</p>
 </iframe>
