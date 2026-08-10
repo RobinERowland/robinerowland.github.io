@@ -90,7 +90,7 @@ Wildlife ecologist with demonstrated experience in data management, technical an
 ```{r}
 tibble::tribble(
   ~year,           ~what,
-  "2023 - present", "<span class='cv-entry-title'>Doctor of Philosophy</span>, University of the Sunshine Coast<br>Thesis: Impacts of Urban Living on Insectivorous Bats<br><span class='cv-entry-translation'>Anticipated completion: December 2026</span>",
+  "2023 - present", "<span class='cv-entry-title'>Doctor of Philosophy</span>, University of the Sunshine Coast<br>Thesis: Impacts of Urban Living on Insectivorous Bats<br><span class='cv-entry-translation'>Anticipated completion: January 2026</span>",
   "2012 - 2016",     "<span class='cv-entry-title'>Bachelor of Arts (Honours Program), Animal Behaviour</span>, Eckerd College, USA"
 ) |>
   kable()
