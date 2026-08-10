@@ -114,26 +114,56 @@ replace_section("_pages/cv.md", "OUTREACH", paste(outreach_entries, collapse = "
 # PRESENTATIONS
 # ============================================================
 
+# ============================================================
+# PRESENTATIONS
+# ============================================================
+
 presentation_entries <- vapply(
   seq_len(nrow(presentations)),
   function(i) {
-    date <- format_cv_date_range(presentations$date[i], presentations$date_end[i])
-    details <- presentations$what[i]
+    
+    date <- format_cv_date_range(
+      presentations$date[i],
+      presentations$date_end[i]
+    )
+    
+    title <- presentations$what[i]
+    format <- presentations$format[i]
     where <- presentations$where[i]
+    additional <- presentations$additional_info[i]
+    
+    info <- c(
+      title,
+      format,
+      where,
+      additional
+    )
+    
+    # Remove empty cells
+    info <- info[
+      !is.na(info) &
+        trimws(info) != ""
+    ]
     
     paste0(
       "**", date, "** — ",
-      details,
-      " — ",
-      where
+      paste(info, collapse = " — ")
     )
   },
   character(1)
 )
 
-replace_section("_pages/presentations.md", "PRESENTATIONS", paste(presentation_entries, collapse = "\n\n"))
-replace_section("_pages/cv.md", "PRESENTATIONS", paste(presentation_entries, collapse = "<br>\n"))
+replace_section(
+  "_pages/presentations.md",
+  "PRESENTATIONS",
+  paste(presentation_entries, collapse = "\n\n")
+)
 
+replace_section(
+  "_pages/cv.md",
+  "PRESENTATIONS",
+  paste(presentation_entries, collapse = "<br>\n")
+)
 
 # ============================================================
 # INVITED SEMINARS
