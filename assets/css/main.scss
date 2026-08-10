@@ -37,22 +37,38 @@
     "layout/sidebar",
     "layout/json_cv"
 ;
-/* Smaller website text on phones */
+/* Make the main website content slightly smaller on mobile */
 @media screen and (max-width: 768px) {
-  .page__content {
-    font-size: 0.85rem;
+
+  /* Normal page text */
+  .page__content,
+  .page__content p,
+  .page__content li,
+  .archive,
+  .archive p,
+  .archive li,
+  .archive__item-excerpt {
+    font-size: 12px !important;
     line-height: 1.5;
   }
 
-  .page__content h1 {
-    font-size: 1.55rem;
+  /* Main page headings, including Current Projects */
+  .page__title,
+  .page__content h1,
+  .archive__subtitle {
+    font-size: 17px !important;
+    line-height: 1.25;
   }
 
-  .page__content h2 {
-    font-size: 1.3rem;
+  /* Project and section headings */
+  .page__content h2,
+  .archive__item-title {
+    font-size: 17px !important;
+    line-height: 1.3;
   }
 
   .page__content h3 {
-    font-size: 1.1rem;
+    font-size: 17px !important;
+    line-height: 1.3;
   }
 }
