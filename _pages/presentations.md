@@ -7,6 +7,8 @@ author_profile: true
 
 <!-- AUTO:PRESENTATIONS:START -->
 
+**Jul-2024** — **Roosting Ecology of Australian Insectivorous Bats, A Public Dataset** — Poster — School of Science, Technology and Engineering Research Conference — Best Student Poster
+
 **Aug-2026** — **Physiological Tools for Monitoring Urban Impacts at The Roost Level in Insectivorous Bats** — Talk — Joint Conference of the Australian Mammal Society and Australasian Bat Society, Australia
 
 **Nov-2025** — **Bats Are in The Building: Understanding Anthropogenic Roost Selection Through Habitat Models** — Talk — Ecological Society of Australia Conference, Australia
