@@ -36,7 +36,7 @@ library(pagedown)
 
 # First rebuild the website Markdown from the same cv_entries sheet.
 # This means running render_cv.R updates both outputs in one go.
-source("update_site.R", local = FALSE)
+source("scripts/update_site.R", local = FALSE)
 
 dir.create(
   "files",
