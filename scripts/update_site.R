@@ -1,7 +1,7 @@
 library(readxl)
 library(dplyr)
 
-# Use exactly the same date rules as the printed CV.
+# Use the same date rules as the printed CV
 source("cv/cv_date_helpers.R")
 
 # ============================================================
@@ -69,6 +69,114 @@ replace_section <- function(file, section, new_text) {
 }
 
 
+clean_entry_value <- function(x) {
+  
+  if (
+    length(x) == 0 ||
+    is.na(x) ||
+    trimws(as.character(x)) == ""
+  ) {
+    return("")
+  }
+  
+  trimws(as.character(x))
+}
+
+
+get_entry_value <- function(data, column, i) {
+  
+  if (!column %in% names(data)) {
+    return("")
+  }
+  
+  clean_entry_value(
+    data[[column]][i]
+  )
+}
+
+
+# Used by presentations, science communication,
+# invited seminars and outreach
+format_full_entry <- function(data, i) {
+  
+  date <- clean_entry_value(
+    format_cv_date_range(
+      data$date[i],
+      data$date_end[i]
+    )
+  )
+  
+  title <- get_entry_value(
+    data,
+    "what",
+    i
+  )
+  
+  link <- get_entry_value(
+    data,
+    "url",
+    i
+  )
+  
+  # Make the title clickable when a URL is available
+  if (nzchar(title)) {
+    
+    if (nzchar(link)) {
+      title <- paste0(
+        "[",
+        title,
+        "](",
+        link,
+        ")"
+      )
+    }
+    
+    title <- paste0(
+      "**",
+      title,
+      "**"
+    )
+  }
+  
+  # Include every populated descriptive field
+  information <- c(
+    title,
+    get_entry_value(data, "format", i),
+    get_entry_value(data, "where", i),
+    get_entry_value(data, "department", i),
+    get_entry_value(data, "institution", i),
+    get_entry_value(data, "additional_info", i)
+  )
+  
+  information <- information[
+    nzchar(information)
+  ]
+  
+  entry_parts <- character(0)
+  
+  if (nzchar(date)) {
+    entry_parts <- c(
+      entry_parts,
+      paste0(
+        "**",
+        date,
+        "**"
+      )
+    )
+  }
+  
+  entry_parts <- c(
+    entry_parts,
+    information
+  )
+  
+  paste(
+    entry_parts,
+    collapse = " — "
+  )
+}
+
+
 # ============================================================
 # READ CV DATA MASTER SHEET
 # ============================================================
@@ -76,21 +184,46 @@ replace_section <- function(file, section, new_text) {
 cv_data <- read_excel(
   "cv/cv_data.xlsx",
   sheet = "cv_entries",
-  # Keep date and date_end as text so a year-only entry can never be
-  # silently converted into a full Excel date.
-  col_types = c("guess", "text", "text", rep("guess", 9))
+  
+  # Keep date and date_end as text so year-only
+  # entries remain year-only
+  col_types = c(
+    "guess",
+    "text",
+    "text",
+    rep("guess", 9)
+  )
 )
 
+
+# Exclude rows marked with 1
 if ("exclude" %in% names(cv_data)) {
-  cv_data <- cv_data %>% filter(is.na(exclude) | exclude != 1)
+  
+  cv_data <- cv_data %>%
+    filter(
+      is.na(exclude) |
+        exclude != 1
+    )
 }
 
-outreach      <- cv_data %>% filter(type == "outreach")
-presentations <- cv_data %>% filter(type == "presentations")
-seminars      <- cv_data %>% filter(type == "seminars")
-grants        <- cv_data %>% filter(type == "grants")
-science       <- cv_data %>% filter(type == "sci_comm")
-service       <- cv_data %>% filter(type == "service")
+
+outreach <- cv_data %>%
+  filter(type == "outreach")
+
+presentations <- cv_data %>%
+  filter(type == "presentations")
+
+seminars <- cv_data %>%
+  filter(type == "seminars")
+
+grants <- cv_data %>%
+  filter(type == "grants")
+
+science <- cv_data %>%
+  filter(type == "sci_comm")
+
+service <- cv_data %>%
+  filter(type == "service")
 
 
 # ============================================================
@@ -100,19 +233,25 @@ service       <- cv_data %>% filter(type == "service")
 outreach_entries <- vapply(
   seq_len(nrow(outreach)),
   function(i) {
-    date <- format_cv_date_range(outreach$date[i], outreach$date_end[i])
-    details <- outreach$what[i]
-    paste0("**", date, "** — ", details)
+    
+    format_full_entry(
+      outreach,
+      i
+    )
   },
   character(1)
 )
 
-replace_section("_pages/cv.md", "OUTREACH", paste(outreach_entries, collapse = "<br>\n"))
 
+replace_section(
+  "_pages/cv.md",
+  "OUTREACH",
+  paste(
+    outreach_entries,
+    collapse = "<br>\n"
+  )
+)
 
-# ============================================================
-# PRESENTATIONS
-# ============================================================
 
 # ============================================================
 # PRESENTATIONS
@@ -122,47 +261,32 @@ presentation_entries <- vapply(
   seq_len(nrow(presentations)),
   function(i) {
     
-    date <- format_cv_date_range(
-      presentations$date[i],
-      presentations$date_end[i]
-    )
-    
-    title <- presentations$what[i]
-    format <- presentations$format[i]
-    where <- presentations$where[i]
-    additional <- presentations$additional_info[i]
-    
-    info <- c(
-      title,
-      format,
-      where,
-      additional
-    )
-    
-    # Remove empty cells
-    info <- info[
-      !is.na(info) &
-        trimws(info) != ""
-    ]
-    
-    paste0(
-      "**", date, "** — ",
-      paste(info, collapse = " — ")
+    format_full_entry(
+      presentations,
+      i
     )
   },
   character(1)
 )
 
+
 replace_section(
   "_pages/presentations.md",
   "PRESENTATIONS",
-  paste(presentation_entries, collapse = "\n\n")
+  paste(
+    presentation_entries,
+    collapse = "\n\n"
+  )
 )
+
 
 replace_section(
   "_pages/cv.md",
   "PRESENTATIONS",
-  paste(presentation_entries, collapse = "<br>\n")
+  paste(
+    presentation_entries,
+    collapse = "<br>\n"
+  )
 )
 
 # ============================================================
@@ -172,39 +296,167 @@ replace_section(
 seminar_entries <- vapply(
   seq_len(nrow(seminars)),
   function(i) {
-    date <- format_cv_date_range(seminars$date[i], seminars$date_end[i])
-    details <- seminars$what[i]
-    paste0("**", date, "** — ", details)
+    
+    format_full_entry(
+      seminars,
+      i
+    )
   },
   character(1)
 )
 
-replace_section("_pages/cv.md", "INVITED_SEMINARS", paste(seminar_entries, collapse = "<br>\n"))
+
+replace_section(
+  "_pages/cv.md",
+  "INVITED_SEMINARS",
+  paste(
+    seminar_entries,
+    collapse = "<br>\n"
+  )
+)
 
 
 # ============================================================
-# GRANTS
+# GRANTS AND AWARDS
 # ============================================================
 
 grant_entries <- vapply(
   seq_len(nrow(grants)),
   function(i) {
-    date <- format_cv_date_range(grants$date[i], grants$date_end[i])
-    amount <- grants$amount[i]
-    funder <- grants$where[i]
-    project <- grants$what[i]
-    role <- grants$additional_info[i]
     
-    if (!is.na(amount) && is.numeric(amount)) {
-      amount <- format(amount, big.mark = ",", scientific = FALSE, trim = TRUE)
+    date <- clean_entry_value(
+      format_cv_date_range(
+        grants$date[i],
+        grants$date_end[i]
+      )
+    )
+    
+    amount_raw <- grants$amount[i]
+    
+    amount <- get_entry_value(
+      grants,
+      "amount",
+      i
+    )
+    
+    funder <- get_entry_value(
+      grants,
+      "where",
+      i
+    )
+    
+    project <- get_entry_value(
+      grants,
+      "what",
+      i
+    )
+    
+    role <- get_entry_value(
+      grants,
+      "additional_info",
+      i
+    )
+    
+    # Add thousands separators
+    amount_numeric <- suppressWarnings(
+      as.numeric(amount_raw)
+    )
+    
+    if (
+      nzchar(amount) &&
+      !is.na(amount_numeric)
+    ) {
+      
+      amount <- format(
+        amount_numeric,
+        big.mark = ",",
+        scientific = FALSE,
+        trim = TRUE
+      )
     }
     
-    paste0("**", date, " — $", amount, " AUD** — **", funder, "** — *", project, "* — ", role)
+    date_amount <- character(0)
+    
+    if (nzchar(date)) {
+      date_amount <- c(
+        date_amount,
+        date
+      )
+    }
+    
+    if (nzchar(amount)) {
+      date_amount <- c(
+        date_amount,
+        paste0(
+          "$",
+          amount,
+          " AUD"
+        )
+      )
+    }
+    
+    entry_parts <- character(0)
+    
+    if (length(date_amount) > 0) {
+      entry_parts <- c(
+        entry_parts,
+        paste0(
+          "**",
+          paste(
+            date_amount,
+            collapse = " — "
+          ),
+          "**"
+        )
+      )
+    }
+    
+    if (nzchar(funder)) {
+      entry_parts <- c(
+        entry_parts,
+        paste0(
+          "**",
+          funder,
+          "**"
+        )
+      )
+    }
+    
+    if (nzchar(project)) {
+      entry_parts <- c(
+        entry_parts,
+        paste0(
+          "*",
+          project,
+          "*"
+        )
+      )
+    }
+    
+    if (nzchar(role)) {
+      entry_parts <- c(
+        entry_parts,
+        role
+      )
+    }
+    
+    paste(
+      entry_parts,
+      collapse = " — "
+    )
   },
   character(1)
 )
 
-replace_section("_pages/cv.md", "GRANTS", paste(grant_entries, collapse = "<br>\n"))
+
+replace_section(
+  "_pages/cv.md",
+  "GRANTS",
+  paste(
+    grant_entries,
+    collapse = "<br>\n"
+  )
+)
 
 
 # ============================================================
@@ -214,32 +466,42 @@ replace_section("_pages/cv.md", "GRANTS", paste(grant_entries, collapse = "<br>\
 science_entries <- vapply(
   seq_len(nrow(science)),
   function(i) {
-    date <- format_cv_date_range(science$date[i], science$date_end[i])
-    talk <- science$what[i]
-    link <- science$url[i]
     
-    has_link <- !is.na(link) && nzchar(trimws(as.character(link)))
-    
-    if (length(has_link) == 1 && has_link) {
-      paste0("**", date, "** — [", talk, "](", link, ")")
-    } else {
-      paste0("**", date, "** — ", talk)
-    }
+    format_full_entry(
+      science,
+      i
+    )
   },
   character(1)
 )
 
-# Build the standalone Outreach website page from all three public-facing
-# sections. Science Communication is intentionally shown first.
+
+# ============================================================
+# BUILD THE STANDALONE OUTREACH PAGE
+# ============================================================
+
 outreach_page_text <- paste(
   "## Science Communication",
-  paste(science_entries, collapse = "\n\n"),
+  paste(
+    science_entries,
+    collapse = "\n\n"
+  ),
+  
   "## Invited Seminars",
-  paste(seminar_entries, collapse = "\n\n"),
+  paste(
+    seminar_entries,
+    collapse = "\n\n"
+  ),
+  
   "## Outreach",
-  paste(outreach_entries, collapse = "\n\n"),
+  paste(
+    outreach_entries,
+    collapse = "\n\n"
+  ),
+  
   sep = "\n\n"
 )
+
 
 replace_section(
   "_pages/outreach.md",
@@ -247,7 +509,15 @@ replace_section(
   outreach_page_text
 )
 
-replace_section("_pages/cv.md", "SCIENCE_COMMUNICATION", paste(science_entries, collapse = "<br>\n"))
+
+replace_section(
+  "_pages/cv.md",
+  "SCIENCE_COMMUNICATION",
+  paste(
+    science_entries,
+    collapse = "<br>\n"
+  )
+)
 
 
 # ============================================================
@@ -257,25 +527,57 @@ replace_section("_pages/cv.md", "SCIENCE_COMMUNICATION", paste(science_entries, 
 service_entries <- vapply(
   seq_len(nrow(service)),
   function(i) {
+    
     raw_date <- service$date[i]
     raw_end  <- service$date_end[i]
-    role <- service$what[i]
     
-    if (is.na(raw_date) || trimws(as.character(raw_date)) == "") {
-      paste0("&nbsp;&nbsp;&nbsp;&nbsp;", role)
+    role <- get_entry_value(
+      service,
+      "what",
+      i
+    )
+    
+    # Rows without a date are descriptions
+    # of the previous service role
+    if (clean_entry_value(raw_date) == "") {
+      
+      paste0(
+        "&nbsp;&nbsp;&nbsp;&nbsp;",
+        role
+      )
+      
     } else {
-      date <- format_cv_date_range(raw_date, raw_end)
-      paste0("**", date, "** — ", role)
+      
+      date <- format_cv_date_range(
+        raw_date,
+        raw_end
+      )
+      
+      paste0(
+        "**",
+        date,
+        "** — ",
+        role
+      )
     }
   },
   character(1)
 )
 
-replace_section("_pages/cv.md", "SERVICE_ROLES", paste(service_entries, collapse = "<br>\n"))
+
+replace_section(
+  "_pages/cv.md",
+  "SERVICE_ROLES",
+  paste(
+    service_entries,
+    collapse = "<br>\n"
+  )
+)
 
 
 # ============================================================
 # FINISHED
 # ============================================================
 
-message("Website pages and CV updated successfully.")
+message(
+  "Website pages and CV updated successfully.")
