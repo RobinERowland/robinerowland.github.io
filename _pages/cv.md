@@ -36,6 +36,7 @@ Wildlife ecologist with demonstrated experience in data management, technical an
 </div>
 
 </div>
+
 # Education
 
 **2023–Present — Doctor of Philosophy**  
@@ -66,6 +67,7 @@ Eckerd College, USA
 **ANM100 — Animal Ecology Field Course**
 - Deliver course content on bat acoustics and provide support and instruction for first-year university students during field courses to North Stradbroke Island (Minjerribah).
 - Demonstrate ecological field techniques including transects, acoustic monitoring and animal identification across diverse terrains.
+
 **ANM103 — Animal Form and Function**  
 **ENS222 — Terrestrial Vertebrate Diversity & Ecology**
 - Instruct university students in laboratory techniques and scientific writing.
