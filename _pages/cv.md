@@ -17,10 +17,10 @@ redirect_from:
 <h1 class="cv-name">Robin Rowland</h1>
 
 <strong>0421 902 622</strong><br>
-<a href="mailto:robinerowland@gmail.com">robinerowland@gmail.com</a><br>
+<a href="mailto:robinerowland(at)gmail.com">robinerowland(at)gmail.com</a><br>
 PhD Candidate<br>
 Sippy Downs QLD<br>
-<a href="YOUR-LINKEDIN-URL">LinkedIn</a>
+<a href="https://www.linkedin.com/in/robin-rowland-3b16a3152/">LinkedIn</a>
 
 <h2 class="skills-heading">Key Skills</h2>
 
@@ -50,60 +50,45 @@ Eckerd College, USA
 
 ### PhD Researcher — University of the Sunshine Coast, QLD
 **Feb 2023–Present**
-
 - Lead a research project examining the effects of urbanisation and roost environments on insectivorous bat health and physiology.
 - Developed an open-access continental-scale database of Australian bat roost associations and a complementary functional-trait database.
 - Work with private landholders, non-profit organisations, state and local government, and communicate findings to stakeholders.
 - Mentor and assist with supervision and experimental design of six student research projects, including three undergraduate and three honours projects.
 
-### Bat Walk Workshop Leader — Moreton Bay Council, QLD
-**Oct 2024–Present**
-
-- Organise and lead annual citizen-science bat walks and public workshops.
-
 ### Student Scholar — GBatNet Global Union of Bat Diversity Networks
 **Mar 2024–Present**
-
 - Participate in international working groups and meetings involving bat researchers, conservation practitioners and other specialists.
 - Collaborate on a global review of Data Deficient bat species, including creation, cleaning and management of a large citation database.
 - Contribute to development of globally relevant scientific communication guidelines through the Global Bat Communication Guidelines Working Group.
 
 ### Tutor — University of the Sunshine Coast, QLD
 **Mar 2023–Present**
-
 **ANM100 — Animal Ecology Field Course**
-
 - Deliver course content on bat acoustics and provide support and instruction for first-year university students during field courses to North Stradbroke Island (Minjerribah).
 - Demonstrate ecological field techniques including transects, acoustic monitoring and animal identification across diverse terrains.
-
 **ANM103 — Animal Form and Function**  
 **ENS222 — Terrestrial Vertebrate Diversity & Ecology**
-
 - Instruct university students in laboratory techniques and scientific writing.
 - Moderate student discussions and mark assessments.
 - Lead student groups on vertebrate identification field trips.
 
 ### Outreach Coordinator — Tamborine Mountain Glow Worm Caves, QLD
 **Aug 2017–Feb 2023**
-
 - Liaised with tour and school groups, production companies and news agencies to deliver tailored wildlife conservation information.
 - Represented the organisation at academic conferences and in communication with the public and scientific community.
 
-### Volunteer — Southern Cross University Glider Program, Brisbane, QLD
-**Aug 2019–Nov 2019**
-
-- Captured, collected and recorded data from wild squirrel gliders and sugar gliders.
-- Installed and removed Elliott traps at study sites throughout the Brisbane area.
+### Literature Database Manager & Website Editor - Wildlife Tourism Australia  
+**Aug 2019-Dec 2022**
+- Sorted and standardised existing data literature database for improved accessibility through embedded Zotero library, with ongoing updates for new publications.
+- Maintained and updated website content based on needs of member’s individual sites
 
 ### Research Intern — Busch Gardens Animal Research Center, USA
 **Jun 2016–Nov 2016**
-
 - Collected and analysed behavioural, physiological and parasite data across mammalian and avian species.
 - Coordinated with researchers to design experiments and deliver results from multiple parallel projects.
 
 ### Research Intern — Savannah State University Dolphin Science Lab, USA
 **May 2015–Aug 2015**
-
 - Collected behavioural and environmental data on bottlenose dolphins during weekly field surveys and assisted with database maintenance.
 - Continued working remotely with the laboratory after the internship to complete a study examining injury rates in local dolphin populations.
 
@@ -210,5 +195,5 @@ Eckerd College, USA
 
 # Referees
 
-Dr. Clare Stawski (Primary Supervisor): cstawskiatusc.edu.au, Lecturer University of the Sunshine Coast 
-Dr. Alexis Levengood (Co-Supervisor): alevengoatusc.edu.au, Research Fellow University of the Sunshine Coast
+Dr. Clare Stawski (Primary Supervisor): cstawski(at)usc.edu.au, Lecturer University of the Sunshine Coast 
+Dr. Alexis Levengood (Co-Supervisor): alevengo(at)usc.edu.au, Research Fellow University of the Sunshine Coast
