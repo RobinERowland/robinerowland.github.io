@@ -9,7 +9,7 @@ knit: pagedown::chrome_print
 
 <!--
 This CV template pulls SIX sections live from cv_data.xlsx (sheet "cv_entries"):
-  Service Roles | Grants and Awards | Invited Seminars | Presentations and Posters |
+  Service Roles | Grants and Awards | Invited Presentations | Presentations and Posters |
   Science Communication | Outreach
 To add/update an entry, edit cv_data.xlsx (see its "Instructions" and "Column guide"
 sheets) and re-knit - no need to touch this file for those six sections.
@@ -101,15 +101,15 @@ tibble::tribble(
 tibble::tribble(
   ~year, ~what,
 
-  "2023 --- present", "<span class='cv-entry-title'>PhD Researcher</span>, University of the Sunshine Coast, QLD<br>&bull; Lead a research project examining the effects of urbanisation and roost environments on insectivorous bat health and physiology<br>&bull; Developed an open-access continental-scale database of Australian bat roost associations and a complementary functional-trait database<br>&bull; Work with private landholders, non-profit organisations, and state and local government, and communicate findings to stakeholders<br>&bull; Mentor and assist with supervision and experimental design of six student research projects (three undergraduate, three honours)",
+  "2023 - present", "<span class='cv-entry-title'>PhD Researcher</span>, University of the Sunshine Coast, QLD<br>&bull; Lead a research project examining the effects of urbanisation and roost environments on insectivorous bat health and physiology<br>&bull; Developed an open-access continental-scale database of Australian bat roost associations and a complementary functional-trait database<br>&bull; Work with private landholders, non-profit organisations, and state and local government, and communicate findings to stakeholders<br>&bull; Mentor and assist with supervision and experimental design of six student research projects (three undergraduate, three honours)",
 
-  "2024 --- present", "<span class='cv-entry-title'>Student Scholar</span>, GBatNet Global Union of Bat Diversity Networks<br>&bull; Participate in international working groups and meetings involving bat researchers, conservation practitioners, and other specialists<br>&bull; Collaborate on a global review of Data Deficient bat species, including the creation, cleaning, and management of a large citation database<br>&bull; Contribute to the development of globally relevant scientific communication guidelines as part of the Global Bat Communication Guidelines Working Group",
+  "2024 - present", "<span class='cv-entry-title'>Student Scholar</span>, GBatNet Global Union of Bat Diversity Networks<br>&bull; Participate in international working groups and meetings involving bat researchers, conservation practitioners, and other specialists<br>&bull; Collaborate on a global review of Data Deficient bat species, including the creation, cleaning, and management of a large citation database<br>&bull; Contribute to the development of globally relevant scientific communication guidelines as part of the Global Bat Communication Guidelines Working Group",
 
-  "2023 --- present", "<span class='cv-entry-title'>Tutor</span>, University of the Sunshine Coast, QLD<br><span class='cv-entry-translation'>ANM100 --- Animal Ecology Field Course (&times;4)</span><br>&bull; Deliver course content on bat acoustics and provide support and instruction for first-year university students during a field course on North Stradbroke Island (Minjerribah)<br>&bull; Demonstrate ecological field techniques, including transects, acoustic monitoring, and animal identification, across diverse terrains and adapt delivery to varied student abilities<br><span class='cv-entry-translation'>ANM103 --- Animal Form and Function (&times;4) &nbsp;|&nbsp; ENS222 --- Terrestrial Vertebrate Diversity &amp; Ecology (&times;3)</span><br>&bull; Instruct university students in laboratory techniques and scientific writing, moderate discussions, and mark assignments within short turnaround periods<br>&bull; Lead student groups on annual vertebrate identification field trips",
+  "2023 - present", "<span class='cv-entry-title'>Tutor</span>, University of the Sunshine Coast, QLD<br><span class='cv-entry-translation'>ANM100 - Animal Ecology Field Course (&times;4)</span><br>&bull; Deliver course content on bat acoustics and provide support and instruction for first-year university students during a field course on North Stradbroke Island (Minjerribah)<br>&bull; Demonstrate ecological field techniques, including transects, acoustic monitoring, and animal identification, across diverse terrains and adapt delivery to varied student abilities<br><span class='cv-entry-translation'>ANM103 - Animal Form and Function (&times;4) &nbsp;|&nbsp; ENS222 - Terrestrial Vertebrate Diversity &amp; Ecology (&times;3)</span><br>&bull; Instruct university students in laboratory techniques and scientific writing, moderate discussions, and mark assignments within short turnaround periods<br>&bull; Lead student groups on annual vertebrate identification field trips",
 
-  "2017 --- 2023", "<span class='cv-entry-title'>Outreach Coordinator</span>, Tamborine Mountain Glow Worm Caves, QLD<br>&bull; Liaised with tour and school groups, production companies, and news agencies to deliver tailored wildlife conservation information in a fast-paced environment<br>&bull; Represented the company at academic conferences and communicated with the public and scientific community through emails, reports, and reviews",
+  "2017 - 2023", "<span class='cv-entry-title'>Outreach Coordinator</span>, Tamborine Mountain Glow Worm Caves, QLD<br>&bull; Liaised with tour and school groups, production companies, and news agencies to deliver tailored wildlife conservation information in a fast-paced environment<br>&bull; Represented the company at academic conferences and communicated with the public and scientific community through emails, reports, and reviews",
 
-  "Aug 2019 --- Dec 2022", "<span class='cv-entry-title'>Literature Database Manager &amp; Website Editor</span>, Wildlife Tourism Australia<br>&bull; Sorted and standardised an existing literature database to improve accessibility, integrated an embedded Zotero library, and provided ongoing updates for new publications<br>&bull; Maintained and updated website content to reflect information and updates from individual member sites",
+  "Aug 2019 - Dec 2022", "<span class='cv-entry-title'>Literature Database Manager &amp; Website Editor</span>, Wildlife Tourism Australia<br>&bull; Sorted and standardised an existing literature database to improve accessibility, integrated an embedded Zotero library, and provided ongoing updates for new publications<br>&bull; Maintained and updated website content to reflect information and updates from individual member sites",
 
   "2016", "<span class='cv-entry-title'>Research Intern</span>, Busch Gardens Animal Research Center, USA<br>&bull; Collected and analysed behavioural, physiological, and parasite data on a range of mammalian and avian species<br>&bull; Coordinated with other researchers to design novel experiments and deliver results from multiple parallel projects to internal and external stakeholders",
 
@@ -142,7 +142,7 @@ cv_entries |>
   kable()
 ```
 
-## Invited seminars
+## Invited presentations
 ```{r}
 cv_entries |>
   filter(type == 'seminars', is.na(exclude)) |>
@@ -161,7 +161,7 @@ cv_entries |>
 ```{r}
 cv_entries |>
   filter(type == 'presentations', is.na(exclude)) |>
-  mutate(format_label = if_else(!is.na(format), glue("{format} --- "), "")) |>
+  mutate(format_label = if_else(!is.na(format), glue("{format} - "), "")) |>
   mutate(what = glue("<span class='cv-entry-title'>{what}</span><br>{format_label}{where}")) |>
   mutate(what = if_else(is.na(additional_info), what, glue("{what}, {additional_info}"))) |>
   arrange(desc(date_sort)) |>
@@ -195,10 +195,10 @@ cv_entries |>
 ```{r}
 tibble::tribble(
   ~what,
-  "Statistical analysis in R --- linear modelling, mixed modelling, and spatial modelling with temporal and spatial autocorrelation (UQ R Course)",
+  "Statistical analysis in R - linear modelling, mixed modelling, and spatial modelling with temporal and spatial autocorrelation (UQ R Course)",
   "Operate and Maintain 4WD Vehicle (RIIVEH305F)",
   "Provide Advanced Resuscitation and Oxygen Therapy First Aid (HLTAID015)",
-  "Provide Cardiopulmonary Resuscitation --- CPR (HLTAID009)"
+  "Provide Cardiopulmonary Resuscitation - CPR (HLTAID009)"
 ) |>
   mutate(what = glue("&bull; {what}")) |>
   kable(col.names = NULL)
@@ -208,8 +208,8 @@ tibble::tribble(
 ```{r}
 tibble::tribble(
   ~what,
-  "<span class='cv-entry-title'>Dr Clare Stawski</span> (Primary Supervisor) --- Senior Lecturer, University of the Sunshine Coast<br>cstawski@usc.edu.au &nbsp;|&nbsp;",
-  "<span class='cv-entry-title'>Dr Alexis Levengood</span> (Co-Supervisor and Field Course Leader) --- Research Fellow, University of the Sunshine Coast<br>alevengo@usc.edu.au &nbsp;|&nbsp;"
+  "<span class='cv-entry-title'>Dr Clare Stawski</span> (Primary Supervisor) - Senior Lecturer, University of the Sunshine Coast<br>cstawski@usc.edu.au &nbsp;|&nbsp;",
+  "<span class='cv-entry-title'>Dr Alexis Levengood</span> (Co-Supervisor and Field Course Leader) - Research Fellow, University of the Sunshine Coast<br>alevengo@usc.edu.au &nbsp;|&nbsp;"
 ) |>
   kable(col.names = NULL)
 ```

@@ -96,7 +96,7 @@ get_entry_value <- function(data, column, i) {
 
 
 # Used by presentations, science communication,
-# invited seminars and outreach
+# invited presentations and outreach
 format_full_entry <- function(data, i) {
   
   date <- clean_entry_value(
@@ -172,7 +172,7 @@ format_full_entry <- function(data, i) {
   
   paste(
     entry_parts,
-    collapse = " — "
+    collapse = " - "
   )
 }
 
@@ -290,7 +290,7 @@ replace_section(
 )
 
 # ============================================================
-# INVITED SEMINARS
+# INVITED PRESENTATIONS
 # ============================================================
 
 seminar_entries <- vapply(
@@ -308,7 +308,7 @@ seminar_entries <- vapply(
 
 replace_section(
   "_pages/cv.md",
-  "INVITED_SEMINARS",
+  "INVITED_PRESENTATIONS",
   paste(
     seminar_entries,
     collapse = "<br>\n"
@@ -389,8 +389,7 @@ grant_entries <- vapply(
         date_amount,
         paste0(
           "$",
-          amount,
-          " AUD"
+          amount
         )
       )
     }
@@ -404,7 +403,7 @@ grant_entries <- vapply(
           "**",
           paste(
             date_amount,
-            collapse = " — "
+            collapse = " - "
           ),
           "**"
         )
@@ -442,7 +441,7 @@ grant_entries <- vapply(
     
     paste(
       entry_parts,
-      collapse = " — "
+      collapse = " - "
     )
   },
   character(1)
@@ -487,7 +486,7 @@ outreach_page_text <- paste(
     collapse = "\n\n"
   ),
   
-  "## Invited Seminars",
+  "## Invited Presentations",
   paste(
     seminar_entries,
     collapse = "\n\n"
@@ -556,7 +555,7 @@ service_entries <- vapply(
       paste0(
         "**",
         date,
-        "** — ",
+        "** - ",
         role
       )
     }

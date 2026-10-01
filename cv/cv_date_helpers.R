@@ -139,7 +139,7 @@ format_cv_date_range <- function(start_val, end_val) {
       if (end_fmt == "" || identical(start_fmt, end_fmt)) {
         start_fmt
       } else {
-        paste0(start_fmt, " – ", end_fmt)
+        paste0(start_fmt, " - ", end_fmt)
       }
     },
     character(1)
