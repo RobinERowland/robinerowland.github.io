@@ -122,8 +122,11 @@ tibble::tribble(
 ```{r}
 cv_entries |>
   filter(type == 'service', is.na(exclude)) |>
-  mutate(where = if_else(!is.na(url), glue("[{where}]({url})"), where)) |>
-  mutate(what = glue("<span class='cv-entry-title'>{what}</span>, {where}")) |>
+  mutate(organisation = coalesce(institution, where)) |>
+  mutate(organisation = if_else(!is.na(url) & !is.na(organisation), glue("[{organisation}]({url})"), organisation)) |>
+  mutate(what = if_else(is.na(organisation),
+                        glue("<span class='cv-entry-title'>{what}</span>"),
+                        glue("<span class='cv-entry-title'>{what}</span>, {organisation}"))) |>
   arrange(desc(date_sort)) |>
   select(year, what) |>
   kable()

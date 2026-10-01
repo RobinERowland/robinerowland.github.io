@@ -535,7 +535,46 @@ service_entries <- vapply(
       "what",
       i
     )
-    
+
+    # Organisation comes from institution, falling back to where
+    organisation <- get_entry_value(
+      service,
+      "institution",
+      i
+    )
+
+    if (!nzchar(organisation)) {
+      organisation <- get_entry_value(
+        service,
+        "where",
+        i
+      )
+    }
+
+    link <- get_entry_value(
+      service,
+      "url",
+      i
+    )
+
+    if (nzchar(organisation) && nzchar(link)) {
+      organisation <- paste0(
+        "[",
+        organisation,
+        "](",
+        link,
+        ")"
+      )
+    }
+
+    if (nzchar(organisation)) {
+      role <- paste0(
+        role,
+        ", ",
+        organisation
+      )
+    }
+
     # Rows without a date are descriptions
     # of the previous service role
     if (clean_entry_value(raw_date) == "") {

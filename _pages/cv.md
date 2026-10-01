@@ -110,9 +110,9 @@ Eckerd College, USA
 
 **2026** - Bats in Buildings Working Group Member<br>
 **2026** - UniSC HDR Retreat Organising Committee<br>
-**2023 - present** - Treasurer<br>
-**2020 - 2024** - Committee Member<br>
-**2019 - present** - Wildlife Rescuer & Workshop Co-Lead
+**2023 - present** - Treasurer, UniSC Ecological Society<br>
+**2020 - 2024** - Committee Member, Wildlife Preservation Society of QLD - Scenic Rim<br>
+**2019 - present** - Wildlife Rescuer & Workshop Co-Lead, Bats Queensland
 
 <!-- AUTO:SERVICE_ROLES:END -->
 
