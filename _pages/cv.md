@@ -8,6 +8,16 @@ redirect_from:
 ---
 
 {% include base_path %}
+
+<style>
+  /* CV page only: smaller section headers and a tighter job section */
+  .archive h1:not(.page__title):not(.cv-name) { font-size: 1.3em; }
+  .archive h3 { font-size: 1em; margin: 1.1em 0 0.1em; }
+  .archive h3 + p { margin: 0 0 0.2em; }
+  .archive ul { margin-top: 0; margin-bottom: 0.5em; }
+  .archive li { margin-bottom: 0; line-height: 1.4; }
+</style>
+
 [**Download CV as PDF**]({{ base_path }}/files/Rowland_CV.pdf)
 
 <div class="cv-top">
@@ -125,11 +135,11 @@ Eckerd College, USA
 
 <!-- AUTO:INVITED_PRESENTATIONS:START -->
 
-**Aug-2024** - **Introduction to Scientific Writing** - UniSC Ecological Society<br>
-**Apr-2026** - **Urban Bat Ecology** - GBatNet 'My Field for Dummies' Online Series<br>
-**Oct-2025** - **Bats in Our Backyards - Get to Know Our Nocturnal Neighbours** - University of the Third Age Sunshine Coast<br>
-**Jul-2025** - **Introduction to Zotero and Scientific Citations** - UniSC Ecological Society<br>
-**Sep-2024** - **Ecological Careers Workshop** - UniSC Ecological Society
+**Aug-2024** - *Introduction to Scientific Writing* - UniSC Ecological Society<br>
+**Apr-2026** - *Urban Bat Ecology* - GBatNet 'My Field for Dummies' Online Series<br>
+**Oct-2025** - *Bats in Our Backyards - Get to Know Our Nocturnal Neighbours* - University of the Third Age Sunshine Coast<br>
+**Jul-2025** - *Introduction to Zotero and Scientific Citations* - UniSC Ecological Society<br>
+**Sep-2024** - *Ecological Careers Workshop* - UniSC Ecological Society
 
 <!-- AUTO:INVITED_PRESENTATIONS:END -->
 
@@ -137,22 +147,22 @@ Eckerd College, USA
 
 <!-- AUTO:PRESENTATIONS:START -->
 
-**Jul-2024** - **Roosting Ecology of Australian Insectivorous Bats, A Public Dataset** - Poster - School of Science, Technology and Engineering Research Conference - Best Student Poster<br>
-**Aug-2026** - **Physiological Tools for Monitoring Urban Impacts at The Roost Level in Insectivorous Bats** - Talk - Joint Conference of the Australian Mammal Society and Australasian Bat Society, Australia<br>
-**Nov-2025** - **Bats Are in The Building: Understanding Anthropogenic Roost Selection Through Habitat Models** - Talk - Ecological Society of Australia Conference, Australia<br>
-**Dec-2025** - **Stressed Out Bats: Developing Tools to Monitor Physiological Stress in Three Insectivorous Species** - Talk - Australian and New Zealand Society for Comparative Physiology and Biochemistry Meeting, Australia<br>
-**Aug-2025** - **No One Size Fits All: Exploring Anthropogenic Roost Selection Across an Urban Gradient in South East Queensland** - Talk - 20th International Bat Research Conference, Australia<br>
-**Aug-2025** - **The System Works: Post-Release Survival of Rehabilitated Insectivorous Bats in Australia** - Talk - 20th International Bat Research Conference, Australia<br>
-**Jul-2025** - **Home Is Where the Bats Are: Bats in Man-Made Structures in South East Queensland** - Talk - Animal Ecology Seminar Series, The University of the Sunshine Coast, Australia<br>
-**Apr-2024** - **From Rugs to Rocky Overhangs: Diverse Microclimates of Natural and Anthropogenic Bat Roosts in South East Queensland** - Talk - 21st Australasian Bat Society Conference, Australia<br>
-**Apr-2024** - **Roosting Ecology of Australian Insectivorous Bats, A Public Dataset** - Poster - Australasian Bat Society Conference, Australia - Runner Up Student Poster<br>
-**Oct-2024** - **Roosting Ecology of Australian Insectivorous Bats, A Public Dataset** - Poster - North American Bat Society Conference, Mexico<br>
-**Nov-2023** - **Working with Bat Landlords to Study the Impacts of Urban Living on Insectivorous Bats in South East Queensland** - Talk - Australian Citizen Science Conference, Australia<br>
-**Feb-2020** - **The Success of a Wildlife Corridor on Tamborine Mountain and the Value of Landcare** - Talk - Wildlife Preservation Society Scenic Rim Corridors Workshop, Australia<br>
-**Dec-2019** - **The Scenic Rim and Its Potential Role as an Ethical Wildlife Tourism Destination** - Talk - The Scenic Rim as an Environmentally-Sustainable International Wildlife Destination Workshop, Australia<br>
-**Oct-2018** - **Can Glow-worm Ecotourism Lead to Increased Conservation Knowledge and Positive Intentions Towards Glow-worms in the Wild?** - Talk - 5th National Wildlife Tourism Australia Conference, Australia<br>
-**Apr-2015** - **Can Mongoose Lemurs Recognize Individual Humans?** - Poster - 23rd International Conference on Comparative Cognition, USA<br>
-**Apr-2016** - **Do Common Bottlenose Dolphins That Interact with Humans Experience Greater Rates of Anthropogenic Injuries?** - Talk - Southeast and Mid-Atlantic Marine Mammal Symposium, USA - Best Undergraduate Oral Presentation
+**Jul-2024** - *Roosting Ecology of Australian Insectivorous Bats, A Public Dataset* - Poster - School of Science, Technology and Engineering Research Conference - Best Student Poster<br>
+**Aug-2026** - *Physiological Tools for Monitoring Urban Impacts at The Roost Level in Insectivorous Bats* - Talk - Joint Conference of the Australian Mammal Society and Australasian Bat Society, Australia<br>
+**Nov-2025** - *Bats Are in The Building: Understanding Anthropogenic Roost Selection Through Habitat Models* - Talk - Ecological Society of Australia Conference, Australia<br>
+**Dec-2025** - *Stressed Out Bats: Developing Tools to Monitor Physiological Stress in Three Insectivorous Species* - Talk - Australian and New Zealand Society for Comparative Physiology and Biochemistry Meeting, Australia<br>
+**Aug-2025** - *No One Size Fits All: Exploring Anthropogenic Roost Selection Across an Urban Gradient in South East Queensland* - Talk - 20th International Bat Research Conference, Australia<br>
+**Aug-2025** - *The System Works: Post-Release Survival of Rehabilitated Insectivorous Bats in Australia* - Talk - 20th International Bat Research Conference, Australia<br>
+**Jul-2025** - *Home Is Where the Bats Are: Bats in Man-Made Structures in South East Queensland* - Talk - Animal Ecology Seminar Series, The University of the Sunshine Coast, Australia<br>
+**Apr-2024** - *From Rugs to Rocky Overhangs: Diverse Microclimates of Natural and Anthropogenic Bat Roosts in South East Queensland* - Talk - 21st Australasian Bat Society Conference, Australia<br>
+**Apr-2024** - *Roosting Ecology of Australian Insectivorous Bats, A Public Dataset* - Poster - Australasian Bat Society Conference, Australia - Runner Up Student Poster<br>
+**Oct-2024** - *Roosting Ecology of Australian Insectivorous Bats, A Public Dataset* - Poster - North American Bat Society Conference, Mexico<br>
+**Nov-2023** - *Working with Bat Landlords to Study the Impacts of Urban Living on Insectivorous Bats in South East Queensland* - Talk - Australian Citizen Science Conference, Australia<br>
+**Feb-2020** - *The Success of a Wildlife Corridor on Tamborine Mountain and the Value of Landcare* - Talk - Wildlife Preservation Society Scenic Rim Corridors Workshop, Australia<br>
+**Dec-2019** - *The Scenic Rim and Its Potential Role as an Ethical Wildlife Tourism Destination* - Talk - The Scenic Rim as an Environmentally-Sustainable International Wildlife Destination Workshop, Australia<br>
+**Oct-2018** - *Can Glow-worm Ecotourism Lead to Increased Conservation Knowledge and Positive Intentions Towards Glow-worms in the Wild?* - Talk - 5th National Wildlife Tourism Australia Conference, Australia<br>
+**Apr-2015** - *Can Mongoose Lemurs Recognize Individual Humans?* - Poster - 23rd International Conference on Comparative Cognition, USA<br>
+**Apr-2016** - *Do Common Bottlenose Dolphins That Interact with Humans Experience Greater Rates of Anthropogenic Injuries?* - Talk - Southeast and Mid-Atlantic Marine Mammal Symposium, USA - Best Undergraduate Oral Presentation
 
 <!-- AUTO:PRESENTATIONS:END -->
 
@@ -160,13 +170,13 @@ Eckerd College, USA
 
 <!-- AUTO:SCIENCE_COMMUNICATION:START -->
 
-**Jan-2026** - **Commenting on Noosa Flying Fox Mass Entanglement Event** - ABC Sunshine Coast Radio, Wide Bay, Southern Queensland<br>
-**Jan-2026** - **Commenting on Annual Influx of Little Red Flying Foxes in the Region** - ABC Sunshine Coast Radio<br>
-**Aug-2024** - **[Commenting on Arson Incident on Mooloolah Valley Bat Colony](https://www.abc.net.au/news/2024-08-28/arsonists-kill-48-little-bent-winged-bats-sunshine-coast/104278398)** - ABC Sunshine Coast, ABC Australia<br>
-**Jul-2024** - **[Microbats, Chicken Nuggets, Stress and Wildlife Rescue!](https://open.spotify.com/episode/2CKIDzUEnoRh8V33f3JMRy?si=SQ1X5U1rS2q_-QFs9SOf9w)** - TalkECO Podcast<br>
-**Feb-2024** - **[Study to Help Save Mini Bats That Fly Under the Radar](https://www.sunshinecoastnews.com.au/2024/02/23/study-to-help-save-tiny-bats-that-fly-under-the-radar/)** - Sunshine Coast News<br>
-**Feb-2024** - **Research to Save Tiny Bats from Housing Crisis** - ABC Sunshine Coast Breakfast Radio<br>
-**Jul-2023** - **[Little Forest Bats: Earth's Tiniest Heroes (Australian Mammal of the Year Profile)](https://cosmosmagazine.com/nature/amoty/little-forest-bats-earths-tiniest-heroes/)** - Cosmos Magazine
+**Jan-2026** - *Commenting on Noosa Flying Fox Mass Entanglement Event* - ABC Sunshine Coast Radio, Wide Bay, Southern Queensland<br>
+**Jan-2026** - *Commenting on Annual Influx of Little Red Flying Foxes in the Region* - ABC Sunshine Coast Radio<br>
+**Aug-2024** - *[Commenting on Arson Incident on Mooloolah Valley Bat Colony](https://www.abc.net.au/news/2024-08-28/arsonists-kill-48-little-bent-winged-bats-sunshine-coast/104278398)* - ABC Sunshine Coast, ABC Australia<br>
+**Jul-2024** - *[Microbats, Chicken Nuggets, Stress and Wildlife Rescue!](https://open.spotify.com/episode/2CKIDzUEnoRh8V33f3JMRy?si=SQ1X5U1rS2q_-QFs9SOf9w)* - TalkECO Podcast<br>
+**Feb-2024** - *[Study to Help Save Mini Bats That Fly Under the Radar](https://www.sunshinecoastnews.com.au/2024/02/23/study-to-help-save-tiny-bats-that-fly-under-the-radar/)* - Sunshine Coast News<br>
+**Feb-2024** - *Research to Save Tiny Bats from Housing Crisis* - ABC Sunshine Coast Breakfast Radio<br>
+**Jul-2023** - *[Little Forest Bats: Earth's Tiniest Heroes (Australian Mammal of the Year Profile)](https://cosmosmagazine.com/nature/amoty/little-forest-bats-earths-tiniest-heroes/)* - Cosmos Magazine
 
 <!-- AUTO:SCIENCE_COMMUNICATION:END -->
 
@@ -174,18 +184,18 @@ Eckerd College, USA
 
 <!-- AUTO:OUTREACH:START -->
 
-**Mar-2026** - **Bat Workshop and Echolocation Walk** - Moreton Bay Council<br>
-**Mar-2026** - **Invited Speaker and Exhibit Consultant, Queensland Museum Bat Night Market Exhibit** - World Science Festival Brisbane<br>
-**Nov-2025** - **Bats in Buildings on the Sunshine Coast, Maleny Bat Night** - Sunshine Coast Council<br>
-**Oct-2025** - **Bats of the Sunshine Coast Workshop and Bat Walk** - Mooloolah River Landcare<br>
-**Oct-2025** - **Bats in Your Backyard: Crash Course to the Bats of SEQ ('What's Brewing Behind the Dunes' Series)** - Coolum CoastCare<br>
-**Nov-2024** - **Bat Workshop and Spotlighting Walk** - UniSC Ecological Society<br>
-**Oct-2024** - **Impacts of Urban Living on Insectivorous Bats, Maleny Bat Night** - Sunshine Coast Council<br>
-**Oct-2024** - **Bat Workshop and Echolocation Walk** - Moreton Bay Council<br>
-**Sep-2024** - **Bat Call Walk and Workshop Leader** - Springfield Lakes Nature Centre<br>
-**May-2024** - **Bats and Forests: We Need Bats More Than You Think!** - Maleny Wood Expo, Maleny, QLD<br>
-**Apr-2024** - **Bat Call Walk Leader, Microbat Discovery Walk Series** - Brisbane Catchments Network<br>
-**Oct-2023** - **Sunshine Coast Citizen Science Bat Walk** - Sunshine Coast BioBlitz
+**Mar-2026** - *Bat Workshop and Echolocation Walk* - Moreton Bay Council<br>
+**Mar-2026** - *Invited Speaker and Exhibit Consultant, Queensland Museum Bat Night Market Exhibit* - World Science Festival Brisbane<br>
+**Nov-2025** - *Bats in Buildings on the Sunshine Coast, Maleny Bat Night* - Sunshine Coast Council<br>
+**Oct-2025** - *Bats of the Sunshine Coast Workshop and Bat Walk* - Mooloolah River Landcare<br>
+**Oct-2025** - *Bats in Your Backyard: Crash Course to the Bats of SEQ ('What's Brewing Behind the Dunes' Series)* - Coolum CoastCare<br>
+**Nov-2024** - *Bat Workshop and Spotlighting Walk* - UniSC Ecological Society<br>
+**Oct-2024** - *Impacts of Urban Living on Insectivorous Bats, Maleny Bat Night* - Sunshine Coast Council<br>
+**Oct-2024** - *Bat Workshop and Echolocation Walk* - Moreton Bay Council<br>
+**Sep-2024** - *Bat Call Walk and Workshop Leader* - Springfield Lakes Nature Centre<br>
+**May-2024** - *Bats and Forests: We Need Bats More Than You Think!* - Maleny Wood Expo, Maleny, QLD<br>
+**Apr-2024** - *Bat Call Walk Leader, Microbat Discovery Walk Series* - Brisbane Catchments Network<br>
+**Oct-2023** - *Sunshine Coast Citizen Science Bat Walk* - Sunshine Coast BioBlitz
 
 <!-- AUTO:OUTREACH:END -->
 
@@ -198,5 +208,5 @@ Eckerd College, USA
 
 # Referees
 
-Dr. Clare Stawski (Primary Supervisor): cstawski(at)usc.edu.au, Lecturer University of the Sunshine Coast 
+Dr. Clare Stawski (Primary Supervisor): cstawski(at)usc.edu.au, Lecturer University of the Sunshine Coast<br>
 Dr. Alexis Levengood (Co-Supervisor): alevengo(at)usc.edu.au, Research Fellow University of the Sunshine Coast

@@ -132,9 +132,9 @@ format_full_entry <- function(data, i) {
     }
     
     title <- paste0(
-      "**",
+      "*",
       title,
-      "**"
+      "*"
     )
   }
   
