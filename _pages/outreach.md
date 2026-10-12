@@ -25,7 +25,7 @@ author_profile: true
 
 ## Invited Presentations
 
-**Aug-2024** - *Introduction to Scientific Writing* - UniSC Ecological Society
+**Aug-2026** - *Introduction to Scientific Writing* - UniSC Ecological Society
 
 **Apr-2026** - *Urban Bat Ecology* - GBatNet 'My Field for Dummies' Online Series
 
